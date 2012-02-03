@@ -19,6 +19,7 @@ package com.android.email.activity;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -62,6 +63,8 @@ public class EmailActivity extends Activity implements View.OnClickListener, Fra
 
     /** Loader IDs starting with this is safe to use from ActionBarController. */
     static final int ACTION_BAR_CONTROLLER_LOADER_ID_BASE = 200;
+
+    private static float sLastFontScale = -1;
 
     private Controller mController;
     private Controller.Result mControllerResult;
@@ -161,6 +164,15 @@ public class EmailActivity extends Activity implements View.OnClickListener, Fra
     protected void onCreate(Bundle savedInstanceState) {
         if (Logging.DEBUG_LIFECYCLE && Email.DEBUG) Log.d(Logging.LOG_TAG, this + " onCreate");
 
+        float fontScale = getResources().getConfiguration().fontScale;
+        if (sLastFontScale != -1 && sLastFontScale != fontScale) {
+            // If the font scale has been initialized, and has been detected to be different than
+            // the last time the Activity ran, it means the user changed the font while no
+            // Email Activity was running - we still need to purge static information though.
+            onFontScaleChangeDetected();
+        }
+        sLastFontScale = fontScale;
+
         // UIController is used in onPrepareOptionsMenu(), which can be called from within
         // super.onCreate(), so we need to initialize it here.
         initUIController();
@@ -187,17 +199,20 @@ public class EmailActivity extends Activity implements View.OnClickListener, Fra
         if (savedInstanceState != null) {
             mUIController.onRestoreInstanceState(savedInstanceState);
         } else {
-            initFromIntent();
+            final Intent intent = getIntent();
+            final MessageListContext viewContext = MessageListContext.forIntent(this, intent);
+            if (viewContext == null) {
+                // This might happen if accounts were deleted on another thread, and there aren't
+                // any remaining
+                Welcome.actionStart(this);
+                finish();
+                return;
+            } else {
+                final long messageId = intent.getLongExtra(EXTRA_MESSAGE_ID, Message.NO_MESSAGE);
+                mUIController.open(viewContext, messageId);
+            }
         }
         mUIController.onActivityCreated();
-    }
-
-    private void initFromIntent() {
-        final Intent intent = getIntent();
-        final MessageListContext viewContext = MessageListContext.forIntent(this, intent);
-        final long messageId = intent.getLongExtra(EXTRA_MESSAGE_ID, Message.NO_MESSAGE);
-
-        mUIController.open(viewContext, messageId);
     }
 
     @Override
@@ -398,5 +413,12 @@ public class EmailActivity extends Activity implements View.OnClickListener, Fra
                 }
              }
         }
+    }
+
+    /**
+     * Handle a change to the system font size. This invalidates some static caches we have.
+     */
+    private void onFontScaleChangeDetected() {
+        MessageListItem.resetDrawingCaches();
     }
 }

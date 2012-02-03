@@ -132,11 +132,6 @@
         <item name="android:layout_alignParentRight">true</item>
     </style>
 
-    <style name="action_bar_custom_view">
-        <item name="android:layout_width">350dip</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
     <style name="action_bar_spinner_primary_text">
         <item name="android:includeFontPadding">false</item>
         <item name="android:textSize">18sp</item>
@@ -166,46 +161,13 @@
     </style>
 
     <style name="message_list_item_normal">
-        <item name="android:paddingLeft">16dip</item>
-        <item name="android:paddingRight">32dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
     </style>
 
     <style name="message_list_item_wide">
         <item name="android:paddingLeft">16dip</item>
         <item name="android:paddingRight">16dip</item>
-    </style>
-
-    <style name="RecipientComposeHeading">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/compose_label_text</item>
-        <item name="android:layout_gravity">center_vertical</item>
-     </style>
-
-    <style name="ComposeFieldRelLayout" parent="android:Widget.Holo.Light.EditText">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:addStatesFromChildren">true</item>
-        <item name="android:focusable">false</item>
-        <item name="android:focusableInTouchMode">false</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
-
-    <style name="RecipientComposeFieldLayout" parent="@style/ComposeFieldRelLayout">
-    </style>
-
-    <style name="EmailRecipientEditTextView" parent="@style/RecipientEditTextView">
-        <item name="android:minHeight">0dip</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
-
-    <style name="EmailComposeEditTextView">
-        <item name="android:minHeight">0dip</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@null</item>
     </style>
 
 </resources>

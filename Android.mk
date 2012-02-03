@@ -20,13 +20,15 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 # Include res dir from chips
 chips_dir := ../../../frameworks/ex/chips/res
-res_dir := $(chips_dir) res
+mail_common_dir := ../../../frameworks/opt/mailcommon/res
+res_dir := $(chips_dir) $(mail_common_dir) res
 
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src/com/android/email)
 LOCAL_SRC_FILES += $(call all-java-files-under, src/com/beetstra)
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dir))
+LOCAL_AAPT_FLAGS := --auto-add-overlay
 
 LOCAL_STATIC_JAVA_LIBRARIES := android-common com.android.emailcommon guava android-common-chips
 

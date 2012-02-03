@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Επιλογές συγχρονισμού"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Επισήμανση ως μη αναγνωσμένα"</string>
     <string name="move_action" msgid="3059189775933985898">"Μετακίνηση"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"Κοιν./Κρυφή κοιν."</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ Κοιν./Κρ.κοιν."</string>
     <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Προσθ.Κοιν./Κρ.κοιν."</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Επισύναψη αρχείου"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Επισύναψη αρχείου"</string>
     <string name="close_action" msgid="533058985745238100">"Κλείσιμο"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Αποστολή όλων"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Επιλογή επισύναψης"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Κρυφή κοιν."</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Θέμα"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"Από:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"Προς:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Κοιν.:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Κρυφή κοιν.:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Θέμα:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"Σύνθεση μηνύματος ηλεκτρονικού ταχυδρομείου"</string>
+    <string name="to" msgid="4392614766835725698">"Προς"</string>
+    <string name="cc" msgid="7017720927911078193">"Κοιν."</string>
+    <string name="bcc" msgid="3098643138241111579">"Κρυφ. κοιν."</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Θέμα"</string>
+    <string name="body_hint" msgid="4279864165439577668">"Σύνταξη μηνύματος ηλεκτρονικού ταχυδρομείου"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Αρχικό μήνυμα --------"\n"Θέμα: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"Από: <xliff:g id="SENDER">%2$s</xliff:g>"\n"Προς: <xliff:g id="TO">%3$s</xliff:g>"\n"Κοιν.: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"Ο χρήστης <xliff:g id="SENDER">%s</xliff:g> έγραψε:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Αναφερόμενο κείμενο"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Συμπερίληψη του αναφερόμενου κειμένου"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Συμπερίληψη κειμένου"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Πρέπει να προσθέσετε τουλάχιστον έναν παραλήπτη."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Ορισμένες διευθύνσεις ηλεκτρονικού ταχυδρομείου δεν είναι έγκυρες."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"Εμφάνιση λεπττομερειών"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Λεπτομέρειες μηνύματος"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Πληροφορίες επισύναψης"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"Απαιτείται σύνδεση WiFi"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"Ρυθμίσεις WiFi"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Απαιτείται σύνδεση Wi-Fi"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Ρυθμίσεις Wi-Fi"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"Ρυθμίσεις εφαρμογής"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"Δεν είναι δυνατό το άνοιγμα της επισύναψης."</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"Δεν μπορείτε να αποθηκεύσετε ή να ανοίξετε αυτό το αρχείο επειδή αυτός ο τύπος επισύναψης ενδέχεται να περιέχει κακόβουλο λογισμικό."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"Δεν είναι δυνατή η αποθήκευση ή το άνοιγμα αυτής της επισύναψης εξαιτίας των πολιτικών ασφάλειας αυτού του λογαριασμού."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Υπερβολικά μεγάλο μέγεθος επισύναψης για λήψη μέσω δικτύου κινητής τηλεφωνίας. Μπορείτε να πραγματοποιήσετε λήψη της επισύναψης την επόμενη φορά που θα συνδεθείτε σε δίκτυο WiFi."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Το μέγεθος αυτής της επισύναψης είναι πολύ μεγάλο για τη λήψη μέσω δικτύου κινητής τηλεφωνίας. Μπορείτε να πραγματοποιήσετε λήψη της επισύναψης την επόμενη φορά που θα συνδεθείτε σε δίκτυο Wi-Fi."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"Δεν υπάρχει καμία εγκατεστημένη εφαρμογή η οποία να μπορεί να ανοίξει αυτήν την επισύναψη. Δοκιμάστε να κάνετε λήψη μιας κατάλληλης εφαρμογής από το Android Market."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Αυτή η επισύναψη είναι εφαρμογή. Θα πρέπει να επιλέξετε τις \"Άγνωστες προελεύσεις\" από το μενού Ρυθμίσεις &gt; Εφαρμογές προτού την εγκαταστήσετε."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Δεν είναι δυνατή η αποθήκευση εφαρμογών απευθείας από το ηλεκτρονικό ταχυδρομείο. Αποθηκεύστε πρώτα αυτήν την εφαρμογή και έπειτα εγκαταστήστε την χρησιμοποιώντας την εφαρμογή \"Λήψεις\"."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Το μήνυμα απορρίφθηκε."</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Το μήνυμα αποθηκεύτηκε ως πρόχειρο."</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"Δεν είναι δυνατή η εμφάνιση της επισύναψης."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"Δεν ήταν δυνατή η φόρτωση της επισύναψης \" <xliff:g id="FILENAME">%s</xliff:g>\"."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"Δεν είναι δυνατή η εμφάνιση του συνημμένου."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"Δεν ήταν δυνατή η φόρτωση του συνημμένου \"<xliff:g id="FILENAME">%s</xliff:g>\"."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Άνοιγμα μηνύματος…"</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> μήνυμα μετακινήθηκε σε <xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"Δεν ήταν δυνατή η προώθηση μίας ή περισσότερων επισυνάψεων."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"Η επισύναψη δεν προωθήθηκε"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"Αποτυχία σύνδεσης <xliff:g id="ACCOUNT_NAME">%s</xliff:g>"</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Η σύνδεση απέτυχε"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"Δεν ήταν δυνατή η σύνδεση"</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Συγχρονισμός επαφών από αυτόν τον λογαριασμό."</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Συγχρονισμός ημερολογίου από αυτόν τον λογαριασμό."</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"Συγχρονισμός μηνυμάτων ηλεκτρονικού ταχυδρομείου από αυτόν τον λογαριασμό."</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Αυτόματη λήψη συνημμένων κατά τη σύνδεση σε δίκτυο WiFi"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Αυτόματη λήψη συνημμένων κατά τη σύνδεση σε δίκτυο Wi-Fi"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"Αδυναμία ολοκλήρωσης"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Ημέρες για συγχρονισμό"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Αυτόματη"</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Το όνομα χρήστη ή ο κωδικός πρόσβασης για τον λογαριασμό <xliff:g id="ACCOUNT">%s</xliff:g> είναι λανθασμένα. Θέλετε να τα ενημερώσετε τώρα;"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"Προεπιλεγμένος λογαριασμός"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"Αποστολή μηνυμάτων ηλεκτρονικού ταχυδρομείου από αυτόν τον λογαριασμό από προεπιλογή"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Αυτόματη λήψη συνημμένων"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Αυτόματη λήψη συνημμένων κατά τη σύνδεση σε δίκτυο WiFi"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Λήψη συνημμένων"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Αυτόματη λήψη συνημμένων πρόσφατων μηνυμάτων μέσω Wi-Fi"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"Ειδοποιήσεις μηνυμάτων ηλεκτρονικού ταχυδρομείου"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Συχνότητα συγχρονισμού, ειδοποιήσεις, κτλ."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Εμφάνιση ειδοποίησης στη γραμμή συστήματος κατά τη λήψη μηνύματος ηλεκτρονικού ταχυδρομείου"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Μεγάλο"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Πολύ μεγάλο"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Απάντηση σε όλους"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"Ορισμός \"Απάντηση σε όλους\" ως προεπιλογή για απάντηση σε μηνύματα."</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Επαναφορά προεπιλογής για την επιλογή \"Εμφάνιση εικόνων\""</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Επαναφορά προεπιλογών για όλους τους αποστολείς (να μην εμφανίζονται εικόνες αυτόματα)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"Καταργήθηκε η επιλογή του στοιχείου \"Εμφάνιση εικόνων\"."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"Ορισμός \"Απάντηση σε όλους\" ως προεπιλογή για απαντήσεις σε μηνύματα."</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Ερώτηση για εμφάνιση εικόνων"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Οι εικόνες σε μηνύματα δεν θα εμφανίζονται αυτόματα"</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"Καταργήθηκε η επιλογή του στοιχείου \"Εμφάνιση εικόνων\"."</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g> / <xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Αναμονή για συγχρονισμό"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"Η ηλεκτρονική αλληλογραφία σας θα εμφανιστεί σύντομα."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Αναμονή για αποτελέσματα"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Ορισμένοι διακομιστές ενδέχεται να χρειαστούν αρκετό χρόνο."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Φάκελοι"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Ο συγχρονισμός στο παρασκήνιο για αυτόν το λογαριασμό είναι απενεργοποιημένος κατά την περιαγωγή."</string>
 </resources>

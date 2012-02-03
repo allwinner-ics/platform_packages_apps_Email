@@ -101,11 +101,11 @@
     <!-- Menu item for moving messages to folders [CHAR LIMIT=10] -->
     <string name="move_action">Move</string>
     <!-- Button label for adding CC/BCC fields on message compose. [CHAR LIMIT=16] -->
-    <string name="add_cc_bcc_action">+ Cc/Bcc</string>
+    <string name="plus_cc_label">+ Cc/Bcc</string>
     <!-- Menu item label for adding CC/BCC fields on message compose. [CHAR LIMIT=20] -->
     <string name="add_cc_bcc_menu">Add Cc/Bcc</string>
     <!-- Menu item label for adding an attachment on message compose. [CHAR LIMIT=20] -->
-    <string name="add_attachment_menu">Attach file</string>
+    <string name="add_file_attachment">Attach file</string>
     <!-- Generic button [CHAR LIMIT=16] -->
     <string name="close_action">Close</string>
     <!-- Command shown on Outbox to send all pending messages [CHAR LIMIT=20] -->
@@ -296,21 +296,21 @@
     <!-- Label for From field [CHAR LIMIT=12] -->
     <string name="message_compose_from_label">From:</string>
     <!-- Label for To field [CHAR LIMIT=12] -->
-    <string name="message_compose_to_label">To:</string>
+    <string name="to">To</string>
     <!-- Label for Cc field [CHAR LIMIT=12] -->
-    <string name="message_compose_cc_label">Cc:</string>
+    <string name="cc">Cc</string>
     <!-- Label for Bcc field [CHAR LIMIT=12] -->
-    <string name="message_compose_bcc_label">Bcc:</string>
+    <string name="bcc">Bcc</string>
     <!-- Label for Subject field [CHAR LIMIT=12] -->
-    <string name="message_compose_subject_label">Subject:</string>
+    <string name="subject_hint">Subject</string>
     <!-- Hint text in Message composer body field -->
-    <string name="message_compose_body_hint">Compose Mail</string>
+    <string name="body_hint">Compose email</string>
     <!-- Header for forwarded original messages -->
     <string name="message_compose_fwd_header_fmt">\n\n-------- Original Message --------\nSubject: <xliff:g id="subject">%1$s</xliff:g>\nFrom: <xliff:g id="sender">%2$s</xliff:g>\nTo: <xliff:g id="to">%3$s</xliff:g>\nCC: <xliff:g id="cc">%4$s</xliff:g>\n\n</string>
     <!-- Header for replied-to messages -->
     <string name="message_compose_reply_header_fmt">\n\n<xliff:g id="sender">%s</xliff:g> wrote:\n\n</string>
     <!-- Heading that appears before forwarded text -->
-    <string name="message_compose_quoted_text_label">Quoted text</string>
+    <string name="message_compose_quoted_text_label">Include quoted text</string>
     <!-- Label of checkbox to include original message in a forwarded/replied message
          [CHAR_LIMIT=32] -->
     <string name="message_compose_include_quoted_text_checkbox_label">Include text</string>
@@ -414,9 +414,9 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!-- Title for most attachment info dialogs [CHAR LIMIT=32] -->
     <string name="attachment_info_dialog_default_title">Attachment info</string>
     <!-- Title when Wi-Fi settings prevent attachments from downloading [CHAR LIMIT=32] -->
-    <string name="attachment_info_dialog_wifi_title">WiFi connection required</string>
+    <string name="attachment_info_dialog_wifi_title">Wi-Fi connection required</string>
     <!-- Text of button to launch the Wi-Fi settings activity [CHAR LIMIT=24] -->
-    <string name="attachment_info_wifi_settings">WiFi settings</string>
+    <string name="attachment_info_wifi_settings">Wi-Fi settings</string>
     <!-- Text of button to launch the application settings activity [CHAR LIMIT=24] -->
     <string name="attachment_info_application_settings">App settings</string>
     <!-- Message body when we don't know exactly why an attachment can't be shown -->
@@ -432,7 +432,7 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!-- Message body when the attachment can only be downloaded over Wi-Fi -->
     <string name="attachment_info_wifi_only">
             This attachment is too large to download over a mobile network.
-            You can download it the next time you connect to a WiFi network.</string>
+            You can download it the next time you connect to a Wi-Fi network.</string>
     <!-- Message body when no activities can open the attachment -->
     <string name="attachment_info_no_intent">
             There is no installed app that can open this attachment.
@@ -474,9 +474,9 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <string name="message_saved_toast">Message saved as draft.</string>
     <!-- String that is displayed when the attachment could not be displayed. -->
     <string name="message_view_display_attachment_toast">Can\'t display
-        the attachment.</string>
+        attachment.</string>
     <!-- String that is displayed when the attachment could not be loaded.[CHAR LIMIT=none] -->
-    <string name="message_view_load_attachment_failed_toast">Couldn\'t load the attachment \"
+    <string name="message_view_load_attachment_failed_toast">Couldn\'t load attachment \"
         <xliff:g id="filename">%s</xliff:g>\".</string>
     <!-- String that is displayed when a long message is being parsed. [CHAR LIMIT=none] -->
     <string name="message_view_parse_message_toast">Opening message\u2026</string>
@@ -497,7 +497,7 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <string name="login_failed_ticker">
         <xliff:g id="account_name">%s</xliff:g> signin failed.</string>
     <!-- Notification title when email account authentication fails [CHAR LIMIT=30]-->
-    <string name="login_failed_title">Signin failed</string>
+    <string name="login_failed_title">Couldn\'t sign in</string>
 
     <!-- Size unit for bytes for attachments [CHAR LIMIT=10] -->
     <plurals name="message_view_attachment_bytes">
@@ -750,7 +750,7 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!-- In Account setup options screen, check box to auto-download attachments  [CHAR LIMIT=none]
         -->
     <string name="account_setup_options_background_attachments_label">
-        Automatically download attachments when connected to WiFi</string>
+        Automatically download attachments when connected to Wi-Fi</string>
     <!-- Dialog title when "setup" could not finish -->
     <string name="account_setup_failed_dlg_title">Couldn\'t finish</string>
     <!-- In Account setup options screen, label for email lookback selector -->
@@ -923,10 +923,10 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!-- On Settings screen, setting option name -->
     <!-- Title of account preference for downloading attachments in background [CHAR LIMIT=32] -->
     <string name="account_settings_background_attachments_label">
-        Auto-download attachments</string>
+        Download attachments</string>
     <!-- Summary of account preference for downloading attachments in background [CHAR LIMIT=64] -->
     <string name="account_settings_background_attachments_summary">
-        Automatically download attachments when connected to WiFi</string>
+        Auto-download attachments to recent messages via Wi-Fi</string>
     <string name="account_settings_notify_label">Email notifications</string>
     <!-- On Settings screen, summary line when called via AccountManager for Exchange accounts
         [CHAR LIMIT=50] -->
@@ -1129,6 +1129,16 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
         <item>Large text</item>
         <item>Huge text</item>
     </string-array>
+
+    <!-- The message text size values -->
+    <string-array translatable="false" name="general_preference_text_zoom_size">
+        <item>0.8</item>
+        <item>0.9</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.5</item>
+    </string-array>
+
     <!-- General preference: Title of the dialog box with options for text zoom. [CHAR LIMIT=32] -->
     <string name="general_preference_text_zoom_dialog_title">Message text size</string>
     <!-- General preference:  Text zoom.  Value is "tiny" (-2) [CHAR LIMIT=32] -->
@@ -1145,19 +1155,19 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!--  Settings screen, Reply to all default setting title  [CHAR LIMIT=30] -->
     <string msgid="6469564953937885304" name="general_preference_reply_all_label">Reply all</string>
     <!--  Settings screen, Reply to all default setting summary [CHAR LIMIT=70] -->
-    <string msgid="3356918650886350497" name="general_preference_reply_all_summary">Make \'Reply all\' the default for responding to messages</string>
+    <string msgid="3356918650886350497" name="general_preference_reply_all_summary">Make \"Reply all\" the default for message replies</string>
 
     <!-- Settings screen, title used to clear the setting for the list of
          senders to automatically show pictures for [CHAR LIMIT=80] -->
     <string name="general_preferences_clear_trusted_senders_title"
-        >Restore default for \"Show pictures\"</string>
+        >Ask to show pictures</string>
     <!-- Settings screen, summary for clearing the settings for the list of
          senders to automatically show pictures for [CHAR LIMIT=160] -->
     <string name="general_preferences_clear_trusted_senders_summary"
-        >Restore default for all senders (don\'t show pictures automatically)</string>
+        >Pictures in messages won\'t be shown automatically</string>
     <!-- Message shown in toast when the user taps to clear the lsit of senders
          to automatically show pictures for [CHAR LIMIT=80] -->
-    <string name="trusted_senders_cleared">\"Show pictures\" was cleared.</string>
+    <string name="trusted_senders_cleared">\"Show pictures\" cleared.</string>
 
     <!-- Generic string for "current position" / "total number" [CHAR LIMIT=12] -->
     <string name="position_of_count"><xliff:g example="1">%1$d</xliff:g> of <xliff:g
@@ -1215,4 +1225,8 @@ as <xliff:g id="filename">%s</xliff:g>.</string>
     <!-- A long placeholder string to be used in template XML files message_list_item_*.xml.
          Used only in layout computation, and never actually exposed to the user. -->
     <string name="long_string" translatable="false">looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong</string>
+
+    <!-- This is the message warning the user that they must sync manually when roaming. [CHAR LIMIT=none]-->
+    <string name="require_manual_sync_message">Background sync for this account is disabled while\
+     roaming.</string>
 </resources>

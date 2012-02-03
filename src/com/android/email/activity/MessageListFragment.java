@@ -21,6 +21,7 @@ import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.content.ClipData;
 import android.content.ContentUris;
+import android.content.Context;
 import android.content.Loader;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -165,7 +166,7 @@ public class MessageListFragment extends ListFragment
         /**
          * Called when the specified mailbox does not exist.
          */
-        public void onMailboxNotFound();
+        public void onMailboxNotFound(boolean firstLoad);
 
         /**
          * Called when the user wants to open a message.
@@ -206,7 +207,7 @@ public class MessageListFragment extends ListFragment
         public static final Callback INSTANCE = new EmptyCallback();
 
         @Override
-        public void onMailboxNotFound() {
+        public void onMailboxNotFound(boolean isFirstLoad) {
         }
 
         @Override
@@ -278,7 +279,7 @@ public class MessageListFragment extends ListFragment
      * @return true if the mailbox is a combined mailbox.  Safe to call even before onCreate.
      */
     public boolean isCombinedMailbox() {
-        return getMailboxId() < 0;
+        return getAccountId() == Account.ACCOUNT_ID_COMBINED_VIEW;
     }
 
     public MessageListContext getListContext() {
@@ -369,6 +370,12 @@ public class MessageListFragment extends ListFragment
         mIsViewCreated = true;
         mListPanel = UiUtilities.getView(root, R.id.list_panel);
         return root;
+    }
+
+    public void setLayout(ThreePaneLayout layout) {
+        if (UiUtilities.useTwoPane(mActivity)) {
+            mListAdapter.setLayout(layout);
+        }
     }
 
     private void initSearchHeader() {
@@ -843,8 +850,14 @@ public class MessageListFragment extends ListFragment
 
     @Override
     public void onMoveToMailboxSelected(long newMailboxId, long[] messageIds) {
+        final Context context = getActivity();
+        if (context == null) {
+            // Detached from activity. This callback was really delayed or a monkey was involved.
+            return;
+        }
+
         mCallback.onAdvancingOpAccepted(Utility.toLongSet(messageIds));
-        ActivityHelper.moveMessages(getActivity(), newMailboxId, messageIds);
+        ActivityHelper.moveMessages(context, newMailboxId, messageIds);
 
         // Move is async, so we can't refresh now.  Instead, just clear the selection.
         onDeselectAll();
@@ -1229,7 +1242,7 @@ public class MessageListFragment extends ListFragment
 
         // Start loading...
         final LoaderManager lm = getLoaderManager();
-        lm.initLoader(LOADER_ID_MESSAGES_LOADER, null, new MessagesLoaderCallback());
+        lm.initLoader(LOADER_ID_MESSAGES_LOADER, null, LOADER_CALLBACKS);
     }
 
     /** Timeout to show a warning, since some IMAP searches could take a long time. */
@@ -1254,7 +1267,8 @@ public class MessageListFragment extends ListFragment
     /**
      * Loader callbacks for message list.
      */
-    private class MessagesLoaderCallback implements LoaderManager.LoaderCallbacks<Cursor> {
+    private final LoaderManager.LoaderCallbacks<Cursor> LOADER_CALLBACKS =
+            new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override
         public Loader<Cursor> onCreateLoader(int id, Bundle args) {
             final MessageListContext listContext = getListContext();
@@ -1301,7 +1315,7 @@ public class MessageListFragment extends ListFragment
             mListAdapter.swapCursor(cursor);
 
             if (!cursor.mIsFound) {
-                mCallback.onMailboxNotFound();
+                mCallback.onMailboxNotFound(mIsFirstLoad);
                 return;
             }
 
@@ -1311,6 +1325,13 @@ public class MessageListFragment extends ListFragment
             mIsEasAccount = cursor.mIsEasAccount;
             mIsRefreshable = cursor.mIsRefreshable;
             mCountTotalAccounts = cursor.mCountTotalAccounts;
+
+            // If this is a search result, open the first message.
+            if (UiUtilities.useTwoPane(getActivity()) && mIsFirstLoad && mListContext.isSearch()
+                    && cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                onMessageOpen(getMailboxId(), cursor.getLong(MessagesAdapter.COLUMN_ID));
+            }
 
             // Suspend message notifications as long as we're resumed
             adjustMessageNotification(false);
@@ -1386,7 +1407,7 @@ public class MessageListFragment extends ListFragment
             mSearchedMailbox = null;
             mCountTotalAccounts = 0;
         }
-    }
+    };
 
     /**
      * Show/hide the "selection" action mode, according to the number of selected messages and

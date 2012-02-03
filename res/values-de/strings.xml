@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Synchronisierungsoptionen"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Als ungelesen markieren"</string>
     <string name="move_action" msgid="3059189775933985898">"Verschieben"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ Cc/Bcc"</string>
-    <string name="add_cc_bcc_menu" msgid="4757145078498200242">"\"Cc\"/\"Bcc\" hinzuf."</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Datei anhängen"</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ Cc/Bcc"</string>
+    <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Cc/Bcc hinzufügen"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Datei anhängen"</string>
     <string name="close_action" msgid="533058985745238100">"Schließen"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Alle senden"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Anhang auswählen"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Bcc"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Betreff"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"Von:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"An:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Cc:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Bcc:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Betreff:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"E-Mail schreiben"</string>
+    <string name="to" msgid="4392614766835725698">"An"</string>
+    <string name="cc" msgid="7017720927911078193">"Cc"</string>
+    <string name="bcc" msgid="3098643138241111579">"Bcc"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Betreff"</string>
+    <string name="body_hint" msgid="4279864165439577668">"E-Mail schreiben"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Originalnachricht --------"\n"Betreff: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"Von: <xliff:g id="SENDER">%2$s</xliff:g>"\n"An: <xliff:g id="TO">%3$s</xliff:g>"\n"Cc: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g> schrieb:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Zitierter Text"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Zitierten Text einfügen"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Text einfügen"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Sie müssen mindestens einen Empfänger hinzufügen."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Einige E-Mail-Adressen sind ungültig."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"Details anzeigen"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Nachrichtendetails"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Informationen zum Anhang"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"WLAN-Verbindung erforderlich"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"WLAN-Einstellungen"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"WLAN-Verbindung erforderlich"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"WLAN-Einstellungen"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"App-Einstellungen"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"Anhang kann nicht geöffnet werden."</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"Sie können diese Datei nicht öffnen oder speichern, da diese Art von Anhang möglicherweise schädliche Software enthält."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"Dieser Anhang kann aufgrund der Sicherheitsrichtlinien dieses Kontos nicht gespeichert oder geöffnet werden."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Dieser Anhang ist zu groß, um ihn über ein Mobilfunknetz herunterzuladen. Sie können ihn herunterladen, sobald Sie das nächste Mal mit einem WLAN-Netzwerk verbunden sind."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Dieser Anhang ist zu groß, um ihn über ein Mobilfunknetz herunterzuladen. Sie können ihn herunterladen, sobald Sie das nächste Mal mit einem WLAN-Netzwerk verbunden sind."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"Sie verfügen über keine App, mit der Sie diesen Anhang öffnen können. Laden Sie eine entsprechende App von Android Market herunter."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Dieser Anhang ist eine App. Aktivieren Sie \"Unbekannte Quellen\" unter \"Einstellungen\" &gt; \"Apps\", damit Sie die App installieren können."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Apps können nicht direkt aus E-Mails installiert werden. Speichern Sie diese App zuerst und installieren Sie sie dann mithilfe der App \"Downloads\"."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Nachricht gelöscht"</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Nachricht als Entwurf gespeichert"</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"Anhang kann nicht angezeigt werden."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"Anhang \"<xliff:g id="FILENAME">%s</xliff:g>\" kann nicht geladen werden."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"Anhang kann nicht angezeigt werden."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"Anhang \"<xliff:g id="FILENAME">%s</xliff:g>\" kann nicht geladen werden."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Nachricht wird geöffnet..."</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> Nachricht verschoben in: <xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"Mindestens ein Anhang wurde nicht weitergeleitet."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"Anhang nicht weitergeleitet"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"Fehler beim Anmelden in <xliff:g id="ACCOUNT_NAME">%s</xliff:g>."</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Fehler bei Anmeldung"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"Anmeldung nicht möglich"</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g> B"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g> B"</item>
@@ -241,7 +241,7 @@
     <string name="account_setup_basics_email_label" msgid="3454164053624112047">"E-Mail-Adresse"</string>
     <string name="account_setup_basics_password_label" msgid="9133549799291519298">"Passwort"</string>
     <string name="account_setup_basics_default_label" msgid="5924790142029806711">"E-Mails standardmäßig von diesem Konto senden"</string>
-    <string name="account_setup_basics_manual_setup_action" msgid="8053852205391155912">"Manuelle Einrichtung"</string>
+    <string name="account_setup_basics_manual_setup_action" msgid="8053852205391155912">"Manuell einrichten"</string>
     <string name="account_setup_username_password_toast" msgid="3968270274727947460">"Geben Sie eine gültige E-Mail-Adresse und ein gültiges Passwort ein."</string>
     <string name="account_duplicate_dlg_title" msgid="8089732986912704425">"Dupliziertes Konto"</string>
     <string name="account_duplicate_dlg_message_fmt" msgid="6447629283679935840">"Sie verwenden diesen Nutzernamen bereits für das Konto \"<xliff:g id="DUPLICATE">%s</xliff:g>\"."</string>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Kontakte dieses Kontos synchronisieren"</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Kalender dieses Kontos synchronisieren"</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"E-Mails dieses Kontos synchronisieren"</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Automatischer Download von Anhängen bei WLAN-Verbindung"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Anhänge bei WLAN-Verbindung automatisch herunterladen"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"Fertigstellen nicht möglich"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Zu synchronisierende Tage"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Automatisch"</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Der Nutzername oder das Passwort für <xliff:g id="ACCOUNT">%s</xliff:g> ist falsch. Jetzt aktualisieren?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"Standardkonto"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"E-Mails standardmäßig von diesem Konto senden"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Anhänge autom. herunterladen"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Automatischer Download von Anhängen bei WLAN-Verbindung"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Anhänge herunterladen"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Anhänge neuer Nachrichten automatisch über WLAN herunterladen"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"E-Mail-Benachrichtigung"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Synchronisierungshäufigkeit, Benachrichtigungen usw."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Bei E-Mail-Eingang Benachrichtigung in der Systemleiste"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Groß"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Sehr groß"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Allen antworten"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"\"Allen antworten\" als Standard für die E-Mail-Beantwortung festlegen"</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Bilderanzeige zurücksetzen"</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Auf Standardeinstellung für alle Absender zurücksetzen (Bilder nicht automatisch anzeigen)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"\"Bilder anzeigen\" wurde gelöscht."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"\"Allen antworten\" als Standard für die E-Mail-Beantwortung festlegen"</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Anzeige der Bilder anfordern"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Bilder in E-Mails werden nicht automatisch angezeigt."</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"\"Bilder anzeigen\" gelöscht"</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g> von <xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Warten auf Synchronisierung"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"Ihre E-Mail wird in Kürze angezeigt."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Warten auf Ergebnisse"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Bei einigen Servern benötigen Sie möglicherweise etwas mehr Geduld."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Ordner"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Die Hintergrundsynchronisierung ist für dieses Konto während des Roamings deaktiviert."</string>
 </resources>

@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Chaguo za kusawazisha"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Tia alama kuwa haijasomwa"</string>
     <string name="move_action" msgid="3059189775933985898">"Hamisha"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ Nakala kwa/Nakala fiche kwa"</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ Nakala kwa/Nakala fiche kwa"</string>
     <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Ongeza Nakala kwa/Nakala fiche kwa"</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Ambatisha faili"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Ambatisha faili"</string>
     <string name="close_action" msgid="533058985745238100">"Funga"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Tuma barua zote"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Chagua kiambatisho"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Nakala fiche kwa"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Kichwa"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"Kutoka:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"Kwa:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Nakala kwa"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Nakala fiche:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Kichwa:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"Tunga Barua"</string>
+    <string name="to" msgid="4392614766835725698">"Kwa"</string>
+    <string name="cc" msgid="7017720927911078193">"Nakala kwa"</string>
+    <string name="bcc" msgid="3098643138241111579">"Nakala fiche kwa"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Kichwa"</string>
+    <string name="body_hint" msgid="4279864165439577668">"Tunga barua pepe"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Ujumbe Asili --------"\n"Kichwa: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"Kutoka: <xliff:g id="SENDER">%2$s</xliff:g>"\n"Kwa: <xliff:g id="TO">%3$s</xliff:g>"\n"Nakala kwa: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g> aliandika:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Maandishii yaliyonukuliwa"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Jumuisha maandishi yaliyonukuliwa"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Jumuisha maandishi"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Ni lazima uongeze angalau mpokeaji mmoja"</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Anwani zingine za barua pepe ni batili."</string>
@@ -144,7 +144,7 @@
     <string name="message_view_date_label" msgid="7033814961837313339">"Tarehe:"</string>
     <string name="message_view_from_label" msgid="6055076379282772675">"Kutoka:"</string>
     <string name="message_view_subject_label" msgid="3731022187530000852">"Kichwa:"</string>
-    <string name="message_view_attachment_view_action" msgid="4408093860407096078">"Onyesha"</string>
+    <string name="message_view_attachment_view_action" msgid="4408093860407096078">"Tazama"</string>
     <string name="message_view_attachment_install_action" msgid="381211378884166381">"Sakinisha"</string>
     <string name="message_view_attachment_play_action" msgid="5214215414665114061">"Cheza"</string>
     <string name="message_view_attachment_load_action" msgid="8645178445048233745">"Pakia"</string>
@@ -177,15 +177,15 @@
     <string name="message_view_show_details" msgid="6287415596441037095">" Onyesha maelezo"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Maelezo ya ujumbe"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Maelezo ya kiambatisho"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"Muunganisho wa WiFi unahitajika"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"Mipangilio ya WiFi"</string>
-    <string name="attachment_info_application_settings" msgid="4124655487276125596">"Mipangilio ya prog"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Inahitaji muunganisho wa Wi-Fi"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Mipangilio ya mtandao-hewa"</string>
+    <string name="attachment_info_application_settings" msgid="4124655487276125596">"Mipangilio ya programu"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"Haiwezi kufungua kiambatisho."</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"Hauwezi kuhifadhi au kufungua faili hii kwa sababu ya aina hii ya kiambatisho kinaweza kuwa na programu hasidi."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"KIambatisho hiki hakiwezi kuhifadhiwa au kufunguliwa kwa sababu ya sera za usalama za akaunti hii."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Kiambataisho hiki ni kirefu mno kuweza kupakua kupitia kwa mtandao wa simu. Unaweza kuipakua wakati mwingine ukiunganisha kwa mtandao wa WiFi."</string>
-    <string name="attachment_info_no_intent" msgid="8139209405745777924">"Hakuna prog zilizosakinishwa ambazo zinaweza kufungua kiambatisho hiki. Jaribu kupakua programu ifaayo kutoka kwa Android Market."</string>
-    <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Kiambatisho hiki ni prog. Unapaswa kuangalia Vyanzo Visivyojulikana katika Mipangilio &amp;gt, Prog kabla uweze kuisanidi."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Kiambataisho hiki ni kirefu mno kuweza kupakua kupitia kwa mtandao wa simu. Unaweza kuipakua wakati mwingine ukiunganisha kwa mtandao-hewa."</string>
+    <string name="attachment_info_no_intent" msgid="8139209405745777924">"Hakuna programu zilizosakinishwa ambazo zinaweza kufungua kiambatisho hiki. Jaribu kupakua programu ifaayo kutoka kwa Android Market."</string>
+    <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Kiambatisho hiki ni programu. Unapaswa kuangalia Vyanzo Visivyojulikana katika Mipangilio &amp;gt, Prog kabla uweze kuisanidi."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Prog haziwezi kusakinishwa moja kwa moja kutoka kwa barua pepe. Kwanza hifadhi programu hii na kisha isakinishe kwa kutumia programu za Upakuzi."</string>
     <string name="attachment_not_found" msgid="7155322700141145123">"Haikuweza kupakia kiambatisho hiki."</string>
     <string name="message_decode_error" msgid="5016042255170947834">"Kulikuwa na hitilafu wakati wa usimbuaji wa ujumbe."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Ujumbe umetupwa."</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Ujumbe umehifadhiwa kama rasimu."</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"Haiwezikuonyesha kiambatisho."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"Haikuweza kupakia kiambatisho hiki  \"<xliff:g id="FILENAME">%s</xliff:g>\"."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"Haiwezi kuonyesha kiambatisho."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"Haikuweza kupakia kiambatisho hiki  \"<xliff:g id="FILENAME">%s</xliff:g>\"."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Inafungua ujumbe..."</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"Barua <xliff:g id="NUM_MESSAGE">%1$d</xliff:g>zimehamishwa hadi <xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"Haikuweza kusambaza kiambatisho kimoja au zaidi."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"Kiambatishho hakijasambazwa"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"<xliff:g id="ACCOUNT_NAME">%s</xliff:g> ilishindwa kuingia."</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Imeshindwa kuingia"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"Haingeweza kuingia"</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"B <xliff:g id="SIZE_IN_BYTES">%d</xliff:g>"</item>
     <item quantity="other" msgid="4613385949384337840">"B <xliff:g id="SIZE_IN_BYTES">%d</xliff:g>"</item>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Sawazisha anwani kutoka kwa akaunti hii."</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Sawazisha kalenda kutoka kwa akaunti hii."</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"Sawazisha barua pepe kutoka kwa akaunti hii."</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Pakua viambatisho kiotomatiki wakati umeunganishwa kwa WiFi"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Pakua viambatisho kiotomatiki  wakati umeunganishwa kwenye mtandao-hewa"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"Imeshindwa kumaliza"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Siku hadi Usawazishaji"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Kiotomatiki"</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Jina la mtumiaji au nenosiri la <xliff:g id="ACCOUNT">%s</xliff:g> si sahihi. Yasasishe saa hii?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"Akaunti chaguo-msingi"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"Tuma barua pepe kutoka kwa akaunti hii kwa chaguo-msingi"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Pakua kioto viambatisho"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Pakua ambatisho zako otomatiki wakati umeunganishwa kwa WiFi"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Pakua viambatisho"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Pakua-otomatiki viambatisho kwa ujumbe wa hivi karibuni kupitia Wi-Fi"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"Arifa za barua pepe"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Mara za kusawazisha, kutuma arifa, n.k."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Arifu katika upau wa hali barua pepe inapofika"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Kubwa"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Kubwa mno"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Jibu wote"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"Fanya \'Jibu wote\' iwe chaguo mbadala ya kujibu ujumbe"</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Rejesha chaguo-msingi la \"Onyesha picha\""</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Rejesha chaguo-msingi kwa watumaji wote (usionyeshe picha kiotomatiki)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"\"Picha Onyesha\" ilifutwa."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"Fanya \"Jibu wote\" iwe chaguo-msingi kwa majibu ya ujumbe"</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Uliza kuonyesha picha"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Picha kwenye ujumbe hazitaonyeshwa kiotomatiki"</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"Onyesha picha zilizoondolewa."</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g> ya <xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Inasubiri kusawazisha"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"Barua pepe yako itaonekana hivi karibuni."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Inasubiri matokeo"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Seva zingine zinaweza kuchukua muda mrefu."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Folda"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Ulandanishi wa mandharinyuma ya akaunti hii imelemazwa wakati wa kuzurura."</string>
 </resources>

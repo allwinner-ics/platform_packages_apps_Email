@@ -32,6 +32,7 @@ import com.android.email.MessageListContext;
 import com.android.email.Preferences;
 import com.android.email.R;
 import com.android.email.RefreshManager;
+import com.android.email.RequireManualSyncDialog;
 import com.android.email.activity.setup.AccountSettings;
 import com.android.email.activity.setup.MailboxSettings;
 import com.android.emailcommon.Logging;
@@ -206,6 +207,9 @@ abstract class UIControllerBase implements MailboxListFragment.Callback,
         if (mNfcHandler != null) {
             mNfcHandler.onAccountChanged();  // workaround for email not set on initial load
         }
+        long accountId = getUIAccountId();
+        Preferences.getPreferences(mActivity).setLastUsedAccountId(accountId);
+        showAccountSpecificWarning(accountId);
     }
 
     /**
@@ -556,6 +560,8 @@ abstract class UIControllerBase implements MailboxListFragment.Callback,
         if (mNfcHandler != null) {
             mNfcHandler.onAccountChanged();
         }
+        Preferences.getPreferences(mActivity).setLastUsedAccountId(accountId);
+        showAccountSpecificWarning(accountId);
     }
 
     /**
@@ -902,10 +908,14 @@ abstract class UIControllerBase implements MailboxListFragment.Callback,
 
     // MessageListFragment.Callback
     @Override
-    public void onMailboxNotFound() {
+    public void onMailboxNotFound(boolean isFirstLoad) {
         // Something bad happened - the account or mailbox we were looking for was deleted.
         // Just restart and let the entry flow find a good default view.
-        Utility.showToast(mActivity, R.string.toast_mailbox_not_found);
+        if (isFirstLoad) {
+            // Only show this if it's the first load (e.g. a shortcut) rather an a return to
+            // a mailbox (which might be in a just-deleted account)
+            Utility.showToast(mActivity, R.string.toast_mailbox_not_found);
+        }
         long accountId = getUIAccountId();
         if (accountId != Account.NO_ACCOUNT) {
             mActivity.startActivity(Welcome.createOpenAccountInboxIntent(mActivity, accountId));
@@ -980,11 +990,10 @@ abstract class UIControllerBase implements MailboxListFragment.Callback,
         }
         Preconditions.checkNotNull(mListContext);
 
-        final long mailboxId = mListContext.getMailboxId();
-        if (mOrderManager == null || mOrderManager.getMailboxId() != mailboxId) {
+        if (mOrderManager == null || !mOrderManager.getListContext().equals(mListContext)) {
             stopMessageOrderManager();
-            mOrderManager =
-                new MessageOrderManager(mActivity, mailboxId, mMessageOrderManagerCallback);
+            mOrderManager = new MessageOrderManager(
+                    mActivity, mListContext, mMessageOrderManagerCallback);
         }
         mOrderManager.moveTo(getMessageId());
         updateNavigationArrows();
@@ -1009,6 +1018,18 @@ abstract class UIControllerBase implements MailboxListFragment.Callback,
         @Override
         public void onMessageNotFound() {
             doAutoAdvance();
+        }
+    }
+
+
+    private void showAccountSpecificWarning(long accountId) {
+        if (accountId != Account.NO_ACCOUNT && accountId != Account.NO_ACCOUNT) {
+            Account account = Account.restoreAccountWithId(mActivity, accountId);
+            if (account != null &&
+                    Preferences.getPreferences(mActivity)
+                    .shouldShowRequireManualSync(mActivity, account)) {
+                new RequireManualSyncDialog(mActivity, account).show();
+            }
         }
     }
 

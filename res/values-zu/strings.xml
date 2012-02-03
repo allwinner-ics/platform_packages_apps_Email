@@ -26,7 +26,7 @@
     <string name="next_action" msgid="3931301986364184415">"Okulandelayo"</string>
     <string name="okay_action" msgid="8365197396795675617">"KULUNGILE"</string>
     <string name="cancel_action" msgid="6967435583794021865">"Khansela"</string>
-    <string name="previous_action" msgid="5181616311579820981">"Okwangaphambilini"</string>
+    <string name="previous_action" msgid="5181616311579820981">"Okwandulele"</string>
     <string name="send_action" msgid="1729766205562446418">"Thumela"</string>
     <string name="reply_action" msgid="4262472229221507619">"Phendula"</string>
     <string name="reply_all_action" msgid="6192179825726332152">"Phendula bonke"</string>
@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Vumelanisa okukhethwa kukho"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Maka njengokungafundiwe"</string>
     <string name="move_action" msgid="3059189775933985898">"Khipha"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ Cc/Bcc"</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ Cc/Bcc"</string>
     <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Engeza Cc/Bcc"</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Namathisela ifayela"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Namathisela ifayela"</string>
     <string name="close_action" msgid="533058985745238100">"Vala"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Thumela yonke imilayezo"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Khetha isinamathiseli"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Bcc"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Isihloko"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"Kusuka:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"Iya ku:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Cc:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Bcc:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Isihloko:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"Bhala i-imeyili"</string>
+    <string name="to" msgid="4392614766835725698">"Kuya"</string>
+    <string name="cc" msgid="7017720927911078193">"Cc"</string>
+    <string name="bcc" msgid="3098643138241111579">"Bcc"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Isihloko"</string>
+    <string name="body_hint" msgid="4279864165439577668">"Ukwakha i-imeyili"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Umyalezo Wangempela --------"\n"Isihloko: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"Kusuka ku: <xliff:g id="SENDER">%2$s</xliff:g>"\n"Kuya ku: <xliff:g id="TO">%3$s</xliff:g>"\n"CC: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g>ubhale:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Umbhalo ocaphuniwe"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Hlanganisa umbhalo ocashuniwe"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Hlanganisa umbhalo"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Kumelwe wengeze okungenani umamukeli oyedwa."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Amanye amakheli e-imeyili awalungile."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"Bonisa imininingwane"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Imininingwane yomlayezo"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Imniningwane yokunamathesilwayo kwi-imeyli"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"Kudingeka ukuxhumeka Okungenazintambo"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"Izilungiselelo ze-WiFi"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Ukuxhumana kungenazintambo kuyadingeka"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Izilungiselelo ze-Wi-Fi"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"Izilungiselelo zohlelo lokusebenza"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"Ayikwazi ukuvula okunamathiselwayo"</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"Angeke ukwazi ukulondoloza noma ukuvula leli fayela ngoba lolu hlobo lokunamatheliswa kwi-imeyli kungenzeka ukuthi luqukethe i-software enokuthile okungahambi kahle."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"Lokhu okunamathiselwe kwi-imeyli angeke kulondolozwe noma kuvulwe ngenxa yemigomo yezokuphepha yale akhawunti."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Lokhu okunamathiselwa kwi-imeyili kukhulu kakhulu ukuba kungalayishwa ngohleloxhumano lweselula. Ungalilayisha ngokuzayo uma uxhuma kuhleloxhumano lokuxhumana kunenazintambo."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Lokhu okunamathiselwa kwi-imeyili kukhulu kakhulu ukuba kungalayishwa ngohleloxhumano lweselula. Ungalilayisha ngokuzayo uma uxhuma kuhleloxhumano lokuxhumana kunenazintambo."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"Alukho uhlelo lokungiselela ukusebenza olufakiwe olungakwazi ukuthi luvule lokhu okunamathiselwe kule imeyili. Zama ukulayisha ungenisa uhlelo lokusebenza olufanele kwiMakethe ye-Android."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Lokhu okunamathiselwe kuwuhlelo lokusebenza. Kumele ubheke Imithombo Engaziwa kwiZilungiselelo &gt; Faka uhlelo lokusebenza ngaphambi kokuba uyifake."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Uhlelo lokusebenza alukwazi ukuthi lufakwe ngqo ukusuka kwi-imeyili. Qala ngokulondoloza lolu hlelo lokusebenza bese ulufaka usebenzisa uhlelo lokusebenza Lokulayisha ungenisa."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Umlayezo ulahliwe."</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Umlayezo ulondolozwe njengokungaphelele"</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"Ayikwazi ukuvula okunamathiselwe kwi-imeyili"</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"Yehlulekile ukufaka okunamathiselwe kwi-imeyli \" <xliff:g id="FILENAME">%s</xliff:g>\"."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"Ayikwazi ukuveza okunamekiwe."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"Yehlulekile ukufaka okunamathiselwe kwi-imeyli \" <xliff:g id="FILENAME">%s</xliff:g>\"."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Ivula umyalezo..."</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> umyalezo uhambiswe e-<xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"Ayikwazi ukudlulisa isinamathiseli esisodwa noma ezengeziwe"</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"Okunamathiselwa kwi-imeyli akuthunyelwanga"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"<xliff:g id="ACCOUNT_NAME">%s</xliff:g> ukungena ngemvume kwehlulekile"</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Kwehlulekile ukungena ngemvume"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"Ayikwazanga ukungena ngemvume."</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
@@ -241,7 +241,7 @@
     <string name="account_setup_basics_email_label" msgid="3454164053624112047">"Ikheli le-imeyli"</string>
     <string name="account_setup_basics_password_label" msgid="9133549799291519298">"Iphasiwedi"</string>
     <string name="account_setup_basics_default_label" msgid="5924790142029806711">"Thumela i-imeyli kusuka kule akhawunti ngokuzenzakalelayo"</string>
-    <string name="account_setup_basics_manual_setup_action" msgid="8053852205391155912">"Ukuhlela ngokulawulwa"</string>
+    <string name="account_setup_basics_manual_setup_action" msgid="8053852205391155912">"Ukumisela"</string>
     <string name="account_setup_username_password_toast" msgid="3968270274727947460">"Sicela uthayiphe ikheli le-imeyili elilungile kanye nephasiwedi."</string>
     <string name="account_duplicate_dlg_title" msgid="8089732986912704425">"I-akhawunti Ephindiwe"</string>
     <string name="account_duplicate_dlg_message_fmt" msgid="6447629283679935840">"Usuvele usebenzisa leli gama lomsebenzisi kule akhawunti \"<xliff:g id="DUPLICATE">%s</xliff:g>\"."</string>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Vumelanisa othintana nabo kusuka kule akhawunti."</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Vumelanisa ikhalenda kule akhawunti."</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"Vumelanisa i-imeyli kule akhawunti."</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Layisha okunamathiselwa kwi-imeyili ngokuzenzakalelayo uma uxhunyiwe kwi-Wi-Fi"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Layisha okunamathiselwa kwi-imeyili ngokuzenzakalelayo uma uxhunyiwe kukuxhuma kungenazintambo"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"Ayikwazanga ukuqeda"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Izinsuku zokuvumelanisa"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Okuzenzakalelayo"</string>
@@ -348,29 +348,29 @@
     <string name="account_security_title" msgid="3511543138560418587">"Ukuphepha kweDivaysi"</string>
     <string name="account_security_policy_explanation_fmt" msgid="6932627044314460766">"Iseva <xliff:g id="SERVER">%s</xliff:g> idinga ukuba uyivumele ukuba ilawule kude ezinye izici zokuphepha kwedivayisi ye-Android."</string>
     <string name="account_setup_failed_dlg_edit_details_action" msgid="5355993309841479360">"Hlela imininingwane"</string>
-    <string name="password_expire_warning_ticker_fmt" msgid="2459977229180023773">"\"<xliff:g id="ACCOUNT">%s</xliff:g>\" idinga ukuba ushintshe iphinikhodi yokuvala isikrini noma i-password"</string>
+    <string name="password_expire_warning_ticker_fmt" msgid="2459977229180023773">"\"<xliff:g id="ACCOUNT">%s</xliff:g>\" idinga ukuba ushintshe iphinikhodi yokuvala isikrini noma iphasiwedi"</string>
     <string name="password_expire_warning_content_title" msgid="7174669014074849304">"Iphasiwedi yokuvala isikrini iphelelwa isikhathi"</string>
     <string name="password_expired_ticker" msgid="4230570412974108968">"Iphinikhodi noma iphasiwedi yakho yokuvala isikrini iphelelwe isikhathi."</string>
     <string name="password_expired_content_title" msgid="4349518706602252979">"Iphasiwedi yokuvala isikrini iphelelwe isikhathi"</string>
     <string name="password_expire_warning_dialog_title" msgid="1687074175399798189">"Iphasiwedi yesikrini yokuvala iphelelwa isikhathi"</string>
-    <string name="password_expire_warning_dialog_content_fmt" msgid="4595246020880351045">"Kumelwe ushintshe iphinikhodi noma i-password yokuvala isikrini maduze, noma idatha ye <xliff:g id="ACCOUNT">%s</xliff:g> izosulwa. Ishintshe manje?"</string>
+    <string name="password_expire_warning_dialog_content_fmt" msgid="4595246020880351045">"Kumele ushintshe iphinikhodi noma iphasiwedi yokuvala isikrini maduze, noma idatha ye-<xliff:g id="ACCOUNT">%s</xliff:g> izosulwa. Ishintshe manje?"</string>
     <string name="password_expired_dialog_title" msgid="2186547998125938084">"Iphasiwedi yokuvala isikrini iphelelwe isikhathi"</string>
-    <string name="password_expired_dialog_content_fmt" msgid="5982207349002500211">"Idatha ye <xliff:g id="ACCOUNT">%s</xliff:g> iyasulwa kudivayisi yakho. Ungayibuyisa ngokushintsha iphinikhodi yakho yokuvala isikrini noma i-password. Ishintshe manje?"</string>
+    <string name="password_expired_dialog_content_fmt" msgid="5982207349002500211">"Idatha ye-<xliff:g id="ACCOUNT">%s</xliff:g> iyasulwa kudivayisi yakho. Ungayibuyisa ngokushintsha iphinikhodi yakho yokuvala isikrini noma iphasiwedi. Ishintshe manje?"</string>
     <string name="account_settings_exit_server_settings" msgid="8006323251094711431">"Lahla izinguquko ezingagciniwe?"</string>
     <string name="account_settings_login_dialog_title" msgid="4024422579146302775">"Ayikwazanga ukungena ngemvume."</string>
-    <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Igama lomsebenzisi noma i-password ka <xliff:g id="ACCOUNT">%s</xliff:g> ayilungile. Wabuyekeze manje?"</string>
+    <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Igama lomsebenzisi noma iphasiwedi ye-<xliff:g id="ACCOUNT">%s</xliff:g> ayilungile. Wabuyekeze manje?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"I-akhawunti ezenzakalelayo"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"Thumela i-imeyli kusuka kule akhawunti ngokuzenzakalelayo"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Izinamathiseli zokulanda okuzenzakalelayo"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Layisha okunamathiselwa kwi-imeyili ngokuzenzakalelayo uma uxhunyiwe kwi-Wi-Fi"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Layisha ngokungenisa okunamathelayo"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Dawuniloda ngokuzenzakalla ukunamathiseleka emiyalezweni yakamuva nge-Wi-Fi"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"Izaziso ze-Imeyli"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Ukuvama kokuvumelanisa, isaziso, nokunye."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Ngazise Kusistimu ochaza ngesimo uma i-imeyli ifika"</string>
     <string name="account_settings_mail_check_frequency_label" msgid="8271462919214560616">"Ukuvama ukuhlola ibhokisi lemiyalezo engenayo"</string>
     <string name="account_settings_incoming_label" msgid="7858928031806297542">"Izilungiselelo ezingenayo"</string>
-    <string name="account_settings_incoming_summary" msgid="2923044634831881068">"Igama lombebenzisi, i-password, nezinye izilungiselelo zesiphakeli ezingenayo"</string>
+    <string name="account_settings_incoming_summary" msgid="2923044634831881068">"Igama lombebenzisi, iphasiwedi, nezinye izilungiselelo zeseva ezingenayo"</string>
     <string name="account_settings_outgoing_label" msgid="4464829249980026745">"Izilungiselelo eziphumayo"</string>
-    <string name="account_settings_outgoing_summary" msgid="3572093624332724311">"Igama lomsebenzisi, i-password, nezinye izilungiselelo zesiphakeli eziphumayo"</string>
+    <string name="account_settings_outgoing_summary" msgid="3572093624332724311">"Igama lomsebenzisi, iphasiwedi, nezinye izilungiselelo zeseva eziphumayo"</string>
     <string name="account_settings_description_label" msgid="8894815221204511715">"Igama le-akhawunti"</string>
     <string name="account_settings_name_label" msgid="8186406122590008449">"Igama lakho"</string>
     <string name="account_settings_signature_label" msgid="4091969938785803201">"Isiginesha"</string>
@@ -436,19 +436,19 @@
     <item msgid="4415205108584620118">"Umbhalo omncane"</item>
     <item msgid="4550219696381691112">"Umbhalo ongubukhulu obujwayelekile"</item>
     <item msgid="6227813549949219991">"Umbhalo omkhulu"</item>
-    <item msgid="1197917420815786571">"Umbhalo omkhulu"</item>
+    <item msgid="1197917420815786571">"Umbhalo omkhulu kakhulu"</item>
   </string-array>
     <string name="general_preference_text_zoom_dialog_title" msgid="7446841758331151643">"Usayizi wombhalo womyalezo"</string>
     <string name="general_preference_text_zoom_tiny" msgid="2948174583663330937">"Ncane kakhulu"</string>
     <string name="general_preference_text_zoom_small" msgid="6618520238223144876">"Ncane"</string>
-    <string name="general_preference_text_zoom_normal" msgid="1765540147950855479">"Kuvamile"</string>
+    <string name="general_preference_text_zoom_normal" msgid="1765540147950855479">"Jwayelekile"</string>
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Okukhulu"</string>
-    <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Khulu"</string>
+    <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Nkulu kakhulu"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Phendula konke"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"Yenza okuthi \"Phendula Konke\" kube okumisiwe kokuphenudula imiyalezo"</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Buyisela okuzenzakalelayo koku \"Bonisa izithombe\""</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Buyisela okuzenzakalelayo kwabathumeli bonke (ungabonisi izithombe ngokuzenzakalelayo)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"\"Bonisa izithombe\" ezisusiwe"</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"Enza \"Phendula konke\" idifalithi yezimpendulo zemiyaezo"</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Cela ukukhombisa izithombe"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Izithombe emilayezweni ingekwe ivezwe"</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"\"Bonisa izithombe\" ezisusiwe"</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g> ku-<xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Ilinde ukuvumelanisa"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"I-imeyli yakho izovela maduze."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Ilinde imiphumela"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Amanye amaseva angathatha isikhathi eside."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Amafolda"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Ukuvumelaniswa okungemumva kule-akhawunti ayisebenzi ngesikhathi usazula zula."</string>
 </resources>

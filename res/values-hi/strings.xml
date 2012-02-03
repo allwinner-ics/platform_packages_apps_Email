@@ -37,14 +37,14 @@
     <string name="create_action" msgid="3062715563215392251">"नया बनाएं"</string>
     <string name="delete_quick_response_action" msgid="3076922270182841978">"हटाएं"</string>
     <string name="quick_responses_empty_view" msgid="1693308598242828422">"कोई त्वरित प्रतिसाद नहीं"</string>
-    <string name="discard_action" msgid="6532206074859505968">"छोड़ें"</string>
+    <string name="discard_action" msgid="6532206074859505968">"छोड़ें"</string>
     <string name="save_draft_action" msgid="6413714270991417223">"ड्राफ़्ट सहेजें"</string>
     <string name="show_quick_text_list_dialog_action" msgid="4136018559611145202">"त्वरित प्रतिसाद शामिल करें"</string>
     <string name="read_action" msgid="4701484794504781686">"पढ़ी गई चिह्नित करें"</string>
     <string name="unread_action" msgid="6280399049357552826">"बिना पढ़ी के रूप में चिह्नित करें"</string>
     <string name="set_star_action" msgid="4660317166196258160">"तारा जोड़ें"</string>
     <string name="remove_star_action" msgid="6689770999647007163">"तारा निकालें"</string>
-    <string name="refresh_action" msgid="5951383001436708175">"रीफ़्रेश करें"</string>
+    <string name="refresh_action" msgid="5951383001436708175">"रीफ़्रेश करें"</string>
     <string name="add_account_action" msgid="8835736309476033727">"खाता जोड़ें"</string>
     <string name="compose_action" msgid="4045702519637388045">"लिखें"</string>
     <string name="search_action" msgid="6325101454876682308">"खोज"</string>
@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"समन्वयन विकल्‍प"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"बिना पढ़ी के रूप में चिह्नित करें"</string>
     <string name="move_action" msgid="3059189775933985898">"ले जाएं"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ Cc/Bcc"</string>
-    <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Cc/Bcc जोड़ें"</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"फ़ाइल अनुलग्‍न करें"</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"Cc/Bcc जोड़ें"</string>
+    <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Cc/Bcc जोड़ें"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"फ़ाइल अनुलग्‍न करें"</string>
     <string name="close_action" msgid="533058985745238100">"बंद करें"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"सभी संदेश भेजें"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"अनुलग्‍नक चुनें"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Bcc"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"विषय"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"प्रेषक:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"प्रति:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Cc:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Bcc:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"विषय:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"मेल लिखें"</string>
+    <string name="to" msgid="4392614766835725698">"प्रति"</string>
+    <string name="cc" msgid="7017720927911078193">"Cc"</string>
+    <string name="bcc" msgid="3098643138241111579">"Bcc"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"विषय"</string>
+    <string name="body_hint" msgid="4279864165439577668">"ईमेल लिखें"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"--------मूल संदेश --------"\n"विषय: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"प्रेषक: <xliff:g id="SENDER">%2$s</xliff:g>"\n"प्रति: <xliff:g id="TO">%3$s</xliff:g>"\n"CC: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g> ने लिखा:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"उद्धरित पाठ"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"उद्धरित पाठ शामिल करें"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"पाठ शामिल करें"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"आपको कम से कम एक प्राप्तकर्ता जोड़ना चाहिए."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"कुछ ईमेल पते अमान्‍य हैं."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"विवरण दिखाएं"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"संदेश विवरण"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"अनुलग्नक जानकारी"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"WiFi कनेक्‍शन आवश्‍यक"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"WiFi सेटिंग"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Wi-Fi कनेक्शन आवश्यक है"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Wi-Fi सेटिंग"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"एप्‍लिकेशन सेटिंग"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"अनुलग्नक खोल नहीं सकता."</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"इस प्रकार के अनुलग्‍नकों में दुर्भावनापूर्ण सॉफ़्टवेयर हो सकता है, इसलिए आप इस फ़ाइल को खोल या सहेज नहीं सकते."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"इस खाते की सुरक्षा नीतियों के कारण यह अनुलग्‍नक सहेजा या खोला नहीं जा सकता."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"किसी मोबाइल नेटवर्क पर डाउनलोड करने के लिए यह अनुलग्‍नक बहुत बड़ा है. अगली बार किसी WiFi नेटवर्क से कनेक्‍ट होने पर आप इसे डाउनलोड कर सकते हैं."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"किसी मोबाइल नेटवर्क पर डाउनलोड करने के लिए यह अनुलग्‍नक बहुत बड़ा है. अगली बार किसी Wi-Fi नेटवर्क से कनेक्‍ट होने पर आप इसे डाउनलोड कर सकते हैं."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"इंस्‍टॉल किया गया ऐसा कोई एप्‍लिकेशन नहीं है जो इस अनुलग्‍नक को खोल सके. Android Market से उपयुक्त एप्‍लिकेशन डाउनलोड करके देखें."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"यह अनुलग्‍नक एक एप्‍लिकेशन है. आपको इसे इंस्‍टॉल करने से पहले सेटिंग &gt; एप्‍लिकेशन में अज्ञात स्रोतों की जांच करनी होगी."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"एप्‍लिकेशन सीधे ईमेल से इंस्‍टॉल नहीं किए जा सकते. पहले यह एप्‍लिकेशन सहेजें और फिर डाउनलोड एप्‍लिकेशन का उपयोग करके उसे इंस्‍टॉल करें."</string>
@@ -200,9 +200,9 @@
     <item quantity="other" msgid="6574961322865652255">"संदेश हटाए गए."</item>
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"संदेश छोड़ दिया गया."</string>
-    <string name="message_saved_toast" msgid="8443125659172627665">"संदेश ड्राफ़्ट के रूप में सहेजा गया."</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"अनुलग्‍नक प्रदर्शित नहीं हो सकता."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"अनुलग्नक \" <xliff:g id="FILENAME">%s</xliff:g>\" को लोड नहीं किया जा सका."</string>
+    <string name="message_saved_toast" msgid="8443125659172627665">"संदेश ड्राफ़्ट के रूप में सहेजा गया."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"अनुलग्‍नक प्रदर्शित नहीं हो सकता."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"अनुलग्नक \" <xliff:g id="FILENAME">%s</xliff:g>\" लोड नहीं किया जा सका."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"संदेश खोल रहा है…"</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> संदेश <xliff:g id="MAILBOX_NAME">%2$s</xliff:g> में ले जाया गया"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"एक या अधिक अनुलग्‍नक अग्रेषित नहीं किए जा सके."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"अनुलग्‍नक अग्रेषित नहीं किया गया"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"<xliff:g id="ACCOUNT_NAME">%s</xliff:g> साइन इन विफल."</string>
-    <string name="login_failed_title" msgid="791871543602843876">"साइन इन विफल"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"साइन इन नहीं हो सका"</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"संपर्कों को इस खाते से सिंक करें."</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"इस खाते से कैलेंडर सिंक करें."</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"इस खाते से ईमेल सिंक करें."</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"WiFi से कनेक्‍ट होने पर अनुलग्‍नकों को स्‍वचालित रूप से डाउनलोड करें"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Wi-Fi से कनेक्‍ट होने पर अनुलग्‍नकों को स्‍वचालित रूप से डाउनलोड करें"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"पूरा नहीं हो सका"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"समन्वयन के लिए दिन:"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"स्वचालित"</string>
@@ -320,7 +320,7 @@
     <string name="account_setup_options_mail_window_2weeks" msgid="4567049268124213035">"दो सप्‍ताह"</string>
     <string name="account_setup_options_mail_window_1month" msgid="5846359669750047081">"एक माह"</string>
     <string name="account_setup_options_mail_window_all" msgid="5372861827683632364">"सभी"</string>
-    <string name="account_setup_options_mail_window_default" msgid="8321351926520165832">"खाते के डिफ़ॉल्ट का उपयोग करें"</string>
+    <string name="account_setup_options_mail_window_default" msgid="8321351926520165832">"खाते के डिफ़ॉल्ट का उपयोग करें"</string>
     <string name="account_setup_failed_dlg_auth_message" msgid="42827150104879570">"उपयोगकर्तानाम या पासवर्ड गलत है."</string>
     <string name="account_setup_failed_dlg_auth_message_fmt" msgid="8598560266430207606">"उपयोगकर्ता नाम या पासवर्ड गलत है."\n"(<xliff:g id="ERROR">%s</xliff:g>)"</string>
     <string name="account_setup_failed_dlg_certificate_message" msgid="3836152264696108805">"सर्वर से सुरक्षित रूप से कनेक्‍ट नहीं हो सकता."</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"<xliff:g id="ACCOUNT">%s</xliff:g> का उपयोगकर्ता नाम या पासवर्ड गलत है. उन्‍हें अभी अपडेट करें?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"डिफ़ॉल्‍ट खाता"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"डिफ़ॉल्‍ट रूप से, इस खाते से ईमेल भेजें"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"अनुलग्नक स्वत: डाउनलोड करें"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"WiFi से कनेक्‍ट होने पर अनुलग्‍नकों को स्‍वचालित रूप से डाउनलोड करें"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"अनुलग्नकों को डाउनलोड करें"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"WiFi के माध्यम से हाल के संदेशों के अनुलग्नक स्वत: डाउनलोड करें"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"ईमेल सूचनाएं"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"आवृत्ति, सूचनाएं आदि सिंक करें."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"ईमेल आने पर सिस्‍टम बार में सूचित करें"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"बड़ा"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"बहुत बड़ा"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"सभी को प्रत्‍युत्तर दें"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"संदेशों के प्रतिसाद के लिए \'सभी को प्रत्युत्तर दें\' को डिफ़ॉल्ट बनाएं"</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"\"चित्र दिखाएं\" के लिए डिफ़ॉल्‍ट पुनर्स्‍थापित करें"</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"सभी प्रेषकों के लिए डिफ़ॉल्‍ट पुनर्स्‍थापित करें (चित्रों को स्‍वचालित रूप से न दिखाएं)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"\"चित्र दिखाएं\" साफ़ कर दिया था."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"संदेशों के प्रत्‍युत्तर के लिए \"सभी को प्रत्युत्तर दें\" को डिफ़ॉल्ट बनाएं"</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"चित्र दिखाने के लिए पूछें"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"संदेशों के चित्र स्वचालित रूप से नहीं दिखाए जाएंगे"</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"\"चित्र दिखाएं\" साफ़ किया गया."</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_2">%2$s</xliff:g> का <xliff:g id="ID_1">%1$d</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"समन्वयन की प्रतीक्षा कर रहा है"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"आपका ईमेल जल्‍दी ही दिखाई देगा."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"परिणामों की प्रतीक्षा कर रहा है"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"कुछ सर्वर को अधिक समय लग सकता है."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"फ़ोल्‍डर"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"रोमिंग के दौरान इस खाते के लिए पृष्ठभूमि समन्‍वयन अक्षम है."</string>
 </resources>

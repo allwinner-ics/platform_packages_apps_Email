@@ -22,6 +22,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.emailcommon.Logging;
+import com.android.emailcommon.provider.Account;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,6 +49,8 @@ public class Preferences {
     private static final String TEXT_ZOOM = "textZoom";
     private static final String BACKGROUND_ATTACHMENTS = "backgroundAttachments";
     private static final String TRUSTED_SENDERS = "trustedSenders";
+    private static final String LAST_ACCOUNT_USED = "lastAccountUsed";
+    private static final String REQUIRE_MANUAL_SYNC_DIALOG_SHOWN = "requireManualSyncDialogShown";
 
     public static final int AUTO_ADVANCE_NEWER = 0;
     public static final int AUTO_ADVANCE_OLDER = 1;
@@ -55,7 +58,7 @@ public class Preferences {
     // "move to older" was the behavior on older versions.
     private static final int AUTO_ADVANCE_DEFAULT = AUTO_ADVANCE_OLDER;
 
-    // The following constants are used as offsets into TEXT_ZOOM_ARRAY (below)
+    // The following constants are used as offsets into R.array.general_preference_text_zoom_size.
     public static final int TEXT_ZOOM_TINY = 0;
     public static final int TEXT_ZOOM_SMALL = 1;
     public static final int TEXT_ZOOM_NORMAL = 2;
@@ -262,6 +265,57 @@ public class Preferences {
         return new JSONArray(set).toString();
     }
 
+    /**
+     * Returns the last used account ID as set by {@link #setLastUsedAccountId}.
+     * The system makes no attempt to automatically track what is considered a "use" - clients
+     * are expected to call {@link #setLastUsedAccountId} manually.
+     *
+     * Note that the last used account may have been deleted in the background so there is also
+     * no guarantee that the account exists.
+     */
+    public long getLastUsedAccountId() {
+        return mSharedPreferences.getLong(LAST_ACCOUNT_USED, Account.NO_ACCOUNT);
+    }
+
+    /**
+     * Sets the specified ID of the last account used. Treated as an opaque ID and does not
+     * validate the value. Value is saved asynchronously.
+     */
+    public void setLastUsedAccountId(long accountId) {
+        mSharedPreferences
+                .edit()
+                .putLong(LAST_ACCOUNT_USED, accountId)
+                .apply();
+    }
+
+    /**
+     * Gets whether the require manual sync dialog has been shown for the specified account.
+     * It should only be shown once per account.
+     */
+    public boolean getHasShownRequireManualSync(Context context, Account account) {
+        return getBoolean(context, account.getEmailAddress(), REQUIRE_MANUAL_SYNC_DIALOG_SHOWN,
+                false);
+    }
+
+    /**
+     * Sets whether the require manual sync dialog has been shown for the specified account.
+     * It should only be shown once per account.
+     */
+    public void setHasShownRequireManualSync(Context context, Account account, boolean value) {
+        setBoolean(context, account.getEmailAddress(), REQUIRE_MANUAL_SYNC_DIALOG_SHOWN, value);
+    }
+
+
+    /**
+     * Get whether to show the manual sync dialog. This dialog is shown when the user is roaming,
+     * connected to a mobile network, the administrator has set the RequireManualSyncWhenRoaming
+     * flag to true, and the dialog has not been shown before for the supplied account.
+     */
+    public boolean shouldShowRequireManualSync(Context context, Account account) {
+        return Account.isAutomaticSyncDisabledByRoaming(context, account.mId)
+                && !getHasShownRequireManualSync(context, account);
+    }
+
     public void clear() {
         mSharedPreferences.edit().clear().apply();
     }
@@ -272,5 +326,26 @@ public class Preferences {
                 Log.v(Logging.LOG_TAG, key + " = " + mSharedPreferences.getAll().get(key));
             }
         }
+    }
+
+    /**
+     * Utility method for setting a boolean value on a per-account preference.
+     */
+    private void setBoolean(Context context, String account, String key, Boolean value) {
+        mSharedPreferences.edit().putBoolean(makeKey(account, key), value).apply();
+    }
+
+    /**
+     * Utility method for getting a boolean value from a per-account preference.
+     */
+    private boolean getBoolean(Context context, String account, String key, boolean def) {
+        return mSharedPreferences.getBoolean(makeKey(account, key), def);
+    }
+
+    /**
+     * Utility method for creating a per account preference key.
+     */
+    private String makeKey(String account, String key) {
+        return account != null ? account + "-" + key : key;
     }
 }

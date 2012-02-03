@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Opciones de sincronización"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Marcar como no leídos"</string>
     <string name="move_action" msgid="3059189775933985898">"Mover"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ CC/CCO"</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ CC/CCO"</string>
     <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Agregar CC/CCO"</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Adjuntar archivo"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Adjuntar un archivo"</string>
     <string name="close_action" msgid="533058985745238100">"Cerrar"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Enviar todos los mensajes"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Seleccionar archivo adjunto"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"CCO"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Asunto"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"De:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"Para:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"CC:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"CCO:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Asunto:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"Redactar mensaje de correo"</string>
+    <string name="to" msgid="4392614766835725698">"Para"</string>
+    <string name="cc" msgid="7017720927911078193">"CC"</string>
+    <string name="bcc" msgid="3098643138241111579">"CCO"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Asunto"</string>
+    <string name="body_hint" msgid="4279864165439577668">"Redactar un correo electrónico"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Mensaje original --------"\n"Asunto: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"De: <xliff:g id="SENDER">%2$s</xliff:g>"\n"Para: <xliff:g id="TO">%3$s</xliff:g>"\n"CC: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g> escribió:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Texto citado"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Incluir el texto citado"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Incluir texto"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Debes agregar al menos un destinatario."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Algunas direcciones de correo electrónico no son válidas."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"Mostrar detalles"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Detalles del mensaje"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Información del archivo adjunto"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"Conexión Wi-Fi necesaria"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"Ajustes de Wi-Fi"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Se necesita conexión Wi-Fi"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Configuración Wi-Fi"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"Config. de aplicación"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"No se puede abrir el archivo adjunto"</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"No puedes guardar ni abrir este archivo porque el tipo de adjunto podría incluir software malintencionado."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"No se puede guardar ni abrir este archivo adjunto debido a las políticas de seguridad de la cuenta."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Este archivo adjunto es demasiado grande para descargar en la red para celulares. Puedes descargarlo la próxima vez que te conectes a una red Wi-Fi."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Este archivo adjunto es demasiado grande para descargar en la red para celulares. Puedes descargarlo la próxima vez que te conectes a la red Wi-Fi."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"Ninguna de las aplicaciones instaladas puede abrir este archivo adjunto. Prueba descargar una aplicación adecuada de Android Market."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Este archivo adjunto es una aplicación. Para instalarla, debes activar la opción Orígenes desconocidos en Ajustes &gt; Aplicaciones."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Las aplicaciones no se pueden instalar directamente desde el correo electrónico. Primero debes guardar esta aplicación y luego instalarla con la aplicación Descargas."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Mensaje descartado."</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Mensaje guardado como borrador."</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"No se puede mostrar el archivo adjunto."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"No se pudo guardar el archivo adjunto \"<xliff:g id="FILENAME">%s</xliff:g>\"."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"No se puede mostrar el archivo adjunto."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"No se ha podido cargar el archivo adjunto \"<xliff:g id="FILENAME">%s</xliff:g>\"."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Abriendo el mensaje…"</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> mensaje trasladado a <xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"No se pudieron enviar uno o más adjuntos."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"No se reenvió el archivo adjunto"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"Error al acceder a <xliff:g id="ACCOUNT_NAME">%s</xliff:g>"</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Error al acceder"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"No se ha podido acceder."</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g>B"</item>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Sincronizar contactos desde esta cuenta"</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Sincroniza el calendario desde esta cuenta"</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"Sincronizar el correo electrónico desde esta cuenta"</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Descargar archivos adjuntos automáticamente al conectarse a Wi-Fi"</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Descargar los archivos adjuntos automáticamente al conectarte a Wi-Fi"</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"No se pudo terminar"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Días para la sincronización"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Automático"</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"El nombre de usuario o la contraseña de <xliff:g id="ACCOUNT">%s</xliff:g>no es correcta. ¿Deseas actualizarlos ahora?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"Cuenta predeterminada"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"Enviar mensaje de correo electrónico desde esta cuenta de forma predeterminada"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Descargar archivos adj. automat."</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Descargar adjuntos automáticamente al conectar a una red Wi-Fi"</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Descargar archivos adjuntos"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Descarga automática por Wi-Fi de los adjuntos de msjs. recientes"</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"Notificaciones de correo electrónico"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Frecuencia de sincronización, notificaciones, etc."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Notificar en la barra de estado cuando llegue un correo electrónico"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Grande"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Enorme"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Responder a todos"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"Elige \"Responder a todos\" como opción predeterminada para los mensajes."</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Restablecer predeterminado para \"Mostrar imágenes\""</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Restablecer predeterminado para todos los remitentes (no mostrar imágenes automáticamente)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"Se borró \"Mostrar imágenes\"."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"Predetermina \"Responder a todos\" para las respuestas de mensajes."</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Preguntar antes de mostrar imágenes"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Las imágenes de los mensajes no se mostrarán automáticamente."</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"Se borró \"Mostrar imágenes\"."</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Esperando para sincronizar"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"Tu correo electrónico aparecerá en breve."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Esperando los resultados..."</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Algunos servidores pueden tardar mucho tiempo."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Carpetas"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Se ha inhabilitado la sincronización en segundo plano de esta cuenta en itinerancia."</string>
 </resources>

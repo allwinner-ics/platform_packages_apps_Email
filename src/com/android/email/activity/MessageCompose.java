@@ -117,7 +117,9 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     private static final String EXTRA_ACCOUNT_ID = "account_id";
     private static final String EXTRA_MESSAGE_ID = "message_id";
     /** If the intent is sent from the email app itself, it should have this boolean extra. */
-    private static final String EXTRA_FROM_WITHIN_APP = "from_within_app";
+    public static final String EXTRA_FROM_WITHIN_APP = "from_within_app";
+    /** If the intent is sent from thw widget. */
+    public static final String EXTRA_FROM_WIDGET = "from_widget";
 
     private static final String STATE_KEY_CC_SHOWN =
         "com.android.email.activity.MessageCompose.ccShown";
@@ -190,7 +192,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     private EditText mMessageContentView;
     private View mAttachmentContainer;
     private ViewGroup mAttachmentContentView;
-    private View mQuotedTextBar;
+    private View mQuotedTextArea;
     private CheckBox mIncludeQuotedTextCheckBox;
     private WebView mQuotedText;
     private ActionSpinnerAdapter mActionSpinnerAdapter;
@@ -226,9 +228,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     };
 
     private static Intent getBaseIntent(Context context) {
-        Intent i = new Intent(context, MessageCompose.class);
-        i.putExtra(EXTRA_FROM_WITHIN_APP, true);
-        return i;
+        return new Intent(context, MessageCompose.class);
     }
 
     /**
@@ -242,14 +242,27 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     }
 
     /**
-     * Compose a new message using the given account. If account is -1 the default account
-     * will be used.
+     * Creates an {@link Intent} that can start the message compose activity from the main Email
+     * activity. This should not be used for Intents to be fired from outside of the main Email
+     * activity, such as from widgets, as the behavior of the compose screen differs subtly from
+     * those cases.
+     */
+    private static Intent getMainAppIntent(Context context, long accountId) {
+        Intent result = getMessageComposeIntent(context, accountId);
+        result.putExtra(EXTRA_FROM_WITHIN_APP, true);
+        return result;
+    }
+
+    /**
+     * Compose a new message using the given account. If account is {@link Account#NO_ACCOUNT}
+     * the default account will be used.
+     * This should only be called from the main Email application.
      * @param context
      * @param accountId
      */
     public static void actionCompose(Context context, long accountId) {
        try {
-           Intent i = getMessageComposeIntent(context, accountId);
+           Intent i = getMainAppIntent(context, accountId);
            context.startActivity(i);
        } catch (ActivityNotFoundException anfe) {
            // Swallow it - this is usually a race condition, especially under automated test.
@@ -261,6 +274,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     /**
      * Compose a new message using a uri (mailto:) and a given account.  If account is -1 the
      * default account will be used.
+     * This should only be called from the main Email application.
      * @param context
      * @param uriString
      * @param accountId
@@ -268,7 +282,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
      */
     public static boolean actionCompose(Context context, String uriString, long accountId) {
         try {
-            Intent i = getMessageComposeIntent(context, accountId);
+            Intent i = getMainAppIntent(context, accountId);
             i.setAction(Intent.ACTION_SEND);
             i.setData(Uri.parse(uriString));
             context.startActivity(i);
@@ -424,7 +438,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         if (savedInstanceState.getBoolean(STATE_KEY_CC_SHOWN)) {
             showCcBccFields();
         }
-        mQuotedTextBar.setVisibility(savedInstanceState.getBoolean(STATE_KEY_QUOTED_TEXT_SHOWN)
+        mQuotedTextArea.setVisibility(savedInstanceState.getBoolean(STATE_KEY_QUOTED_TEXT_SHOWN)
                 ? View.VISIBLE : View.GONE);
         mQuotedText.setVisibility(savedInstanceState.getBoolean(STATE_KEY_QUOTED_TEXT_SHOWN)
                 ? View.VISIBLE : View.GONE);
@@ -530,12 +544,17 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         }
         outState.putBoolean(STATE_KEY_CC_SHOWN, mCcBccContainer.getVisibility() == View.VISIBLE);
         outState.putBoolean(STATE_KEY_QUOTED_TEXT_SHOWN,
-                mQuotedTextBar.getVisibility() == View.VISIBLE);
+                mQuotedTextArea.getVisibility() == View.VISIBLE);
         outState.putString(STATE_KEY_ACTION, mAction);
 
         // If there are any outstanding save requests, ensure that it's noted in case it hasn't
         // finished by the time the activity is restored.
         outState.putLong(STATE_KEY_LAST_SAVE_TASK_ID, mLastSaveTaskId);
+    }
+
+    @Override
+    public void onBackPressed() {
+        onBack(true /* systemKey */);
     }
 
     /**
@@ -552,6 +571,11 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     private boolean isOpenedFromWithinApp() {
         Intent i = getIntent();
         return (i != null && i.getBooleanExtra(EXTRA_FROM_WITHIN_APP, false));
+    }
+
+    private boolean isOpenedFromWidget() {
+        Intent i = getIntent();
+        return (i != null && i.getBooleanExtra(EXTRA_FROM_WIDGET, false));
     }
 
     /**
@@ -663,36 +687,24 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         ViewGroup toParent = UiUtilities.getViewOrNull(this, R.id.to_content);
         if (toParent != null) {
             mToView = (MultiAutoCompleteTextView) toParent.findViewById(R.id.to);
-            ((TextView) toParent.findViewById(R.id.label))
-                    .setText(R.string.message_compose_to_hint);
             ViewGroup ccParent, bccParent;
             ccParent = (ViewGroup) findViewById(R.id.cc_content);
             mCcView = (MultiAutoCompleteTextView) ccParent.findViewById(R.id.cc);
-            ((TextView) ccParent.findViewById(R.id.label))
-                    .setText(R.string.message_compose_cc_hint);
             bccParent = (ViewGroup) findViewById(R.id.bcc_content);
             mBccView = (MultiAutoCompleteTextView) bccParent.findViewById(R.id.bcc);
-            ((TextView) bccParent.findViewById(R.id.label))
-                    .setText(R.string.message_compose_bcc_hint);
         } else {
             mToView = UiUtilities.getView(this, R.id.to);
             mCcView = UiUtilities.getView(this, R.id.cc);
             mBccView = UiUtilities.getView(this, R.id.bcc);
-            // add hints only when no labels exist
-            if (UiUtilities.getViewOrNull(this, R.id.to_label) == null) {
-                mToView.setHint(R.string.message_compose_to_hint);
-                mCcView.setHint(R.string.message_compose_cc_hint);
-                mBccView.setHint(R.string.message_compose_bcc_hint);
-            }
         }
 
         mFromView = UiUtilities.getView(this, R.id.from);
-        mCcBccContainer = UiUtilities.getView(this, R.id.cc_bcc_container);
+        mCcBccContainer = UiUtilities.getView(this, R.id.cc_bcc_wrapper);
         mSubjectView = UiUtilities.getView(this, R.id.subject);
-        mMessageContentView = UiUtilities.getView(this, R.id.message_content);
+        mMessageContentView = UiUtilities.getView(this, R.id.body_text);
         mAttachmentContentView = UiUtilities.getView(this, R.id.attachments);
         mAttachmentContainer = UiUtilities.getView(this, R.id.attachment_container);
-        mQuotedTextBar = UiUtilities.getView(this, R.id.quoted_text_bar);
+        mQuotedTextArea = UiUtilities.getView(this, R.id.quoted_text_area);
         mIncludeQuotedTextCheckBox = UiUtilities.getView(this, R.id.include_quoted_text);
         mQuotedText = UiUtilities.getView(this, R.id.quoted_text);
 
@@ -707,7 +719,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
          * We set this to invisible by default. Other methods will turn it back on if it's
          * needed.
          */
-        mQuotedTextBar.setVisibility(View.GONE);
+        mQuotedTextArea.setVisibility(View.GONE);
         setIncludeQuotedText(false, false);
 
         mIncludeQuotedTextCheckBox.setOnClickListener(this);
@@ -739,8 +751,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         setFocusShifter(R.id.to_label, R.id.to);
         setFocusShifter(R.id.cc_label, R.id.cc);
         setFocusShifter(R.id.bcc_label, R.id.bcc);
-        setFocusShifter(R.id.subject_label, R.id.subject);
-        setFocusShifter(R.id.tap_trap, R.id.message_content);
+        setFocusShifter(R.id.composearea_tap_trap_bottom, R.id.body_text);
 
         mMessageContentView.setOnFocusChangeListener(this);
 
@@ -1110,7 +1121,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     public void onFocusChange(View view, boolean focused) {
         if (focused) {
             switch (view.getId()) {
-                case R.id.message_content:
+                case R.id.body_text:
                     // When focusing on the message content via tabbing to it, or other means of
                     // auto focusing, move the cursor to the end of the body (before the signature).
                     if (mMessageContentView.getSelectionStart() == 0
@@ -1235,7 +1246,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         message.mFlagAttachment = hasAttachments;
         // Use the Intent to set flags saying this message is a reply or a forward and save the
         // unique id of the source message
-        if (mSource != null && mQuotedTextBar.getVisibility() == View.VISIBLE) {
+        if (mSource != null && mQuotedTextArea.getVisibility() == View.VISIBLE) {
             message.mSourceKey = mSource.mId;
             // If the quote bar is visible; this must either be a reply or forward
             // Get the body of the source message here
@@ -1457,6 +1468,10 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     }
 
     private void showQuickResponseDialog() {
+        if (mAccount == null) {
+            // Load not finished, bail.
+            return;
+        }
         InsertQuickResponseDialog.newInstance(null, mAccount)
                 .show(getFragmentManager(), null);
     }
@@ -1508,9 +1523,12 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     }
 
     private void showCcBccFields() {
-        mCcBccContainer.setVisibility(View.VISIBLE);
-        UiUtilities.setVisibilitySafe(this, R.id.add_cc_bcc, View.INVISIBLE);
-        invalidateOptionsMenu();
+        if (mCcBccContainer.getVisibility() != View.VISIBLE) {
+            mCcBccContainer.setVisibility(View.VISIBLE);
+            mCcView.requestFocus();
+            UiUtilities.setVisibilitySafe(this, R.id.add_cc_bcc, View.INVISIBLE);
+            invalidateOptionsMenu();
+        }
     }
 
     /**
@@ -1597,10 +1615,10 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
             // manually are still removable.
             final boolean allowDelete = (attachment.mFlags & Attachment.FLAG_SMART_FORWARD) == 0;
 
-            View view = getLayoutInflater().inflate(R.layout.message_compose_attachment,
-                    mAttachmentContentView, false);
+            View view = getLayoutInflater().inflate(R.layout.attachment, mAttachmentContentView,
+                    false);
             TextView nameView = UiUtilities.getView(view, R.id.attachment_name);
-            ImageView delete = UiUtilities.getView(view, R.id.attachment_delete);
+            ImageView delete = UiUtilities.getView(view, R.id.remove_attachment);
             TextView sizeView = UiUtilities.getView(view, R.id.attachment_size);
 
             nameView.setText(attachment.mFileName);
@@ -1662,7 +1680,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
             return;
         }
         switch (view.getId()) {
-            case R.id.attachment_delete:
+            case R.id.remove_attachment:
                 onDeleteAttachmentIconClicked(view);
                 break;
         }
@@ -1718,7 +1736,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
     private boolean handleCommand(int viewId) {
         switch (viewId) {
         case android.R.id.home:
-            onActionBarHomePressed();
+            onBack(false /* systemKey */);
             return true;
         case R.id.send:
             onSend();
@@ -1749,11 +1767,18 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
         return false;
     }
 
-    private void onActionBarHomePressed() {
+    /**
+     * Handle a tap to the system back key, or the "app up" button in the action bar.
+     * @param systemKey whether or not the system key was pressed
+     */
+    private void onBack(boolean systemKey) {
         finish();
         if (isOpenedFromWithinApp()) {
             // If opened from within the app, we just close it.
-        } else {
+            return;
+        }
+
+        if (isOpenedFromWidget() || !systemKey) {
             // Otherwise, need to open the main screen for the appropriate account.
             // Note that mAccount should always be set by the time the action bar is set up.
             startActivity(Welcome.createOpenAccountInboxIntent(this, mAccount.mId));
@@ -2119,7 +2144,7 @@ public class MessageCompose extends Activity implements OnClickListener, OnFocus
             // TODO: re-enable EmailHtmlUtil.resolveInlineImage() for HTML
             //    EmailHtmlUtil.resolveInlineImage(getContentResolver(), mAccount,
             //                                     text, message, 0);
-            mQuotedTextBar.setVisibility(View.VISIBLE);
+            mQuotedTextArea.setVisibility(View.VISIBLE);
             if (mQuotedText != null) {
                 mQuotedText.loadDataWithBaseURL("email://", text, "text/html", "utf-8", null);
             }

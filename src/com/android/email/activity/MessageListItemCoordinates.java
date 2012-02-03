@@ -123,6 +123,10 @@ public class MessageListItemCoordinates {
         return mode;
     }
 
+    public static boolean isMultiPane(Context context) {
+        return UiUtilities.useTwoPane(context);
+    }
+
     /**
      * Returns the layout id to be inflated in this mode.
      */
@@ -222,6 +226,13 @@ public class MessageListItemCoordinates {
             SUBJECT_LENGTHS = res.getIntArray(R.array.subject_lengths);
         }
         return SUBJECT_LENGTHS[mode];
+    }
+
+    /**
+     * Reset the caches associated with the coordinate layouts.
+     */
+    static void resetCaches() {
+        mCache.clear();
     }
 
     /**

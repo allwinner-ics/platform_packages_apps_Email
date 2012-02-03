@@ -53,9 +53,9 @@
     <string name="mailbox_settings_action" msgid="8008375875310554776">"Synkronointiasetukset"</string>
     <string name="mark_as_unread_action" msgid="3766298115778767554">"Merkitse lukemattomaksi"</string>
     <string name="move_action" msgid="3059189775933985898">"Siirrä"</string>
-    <string name="add_cc_bcc_action" msgid="413546910281713891">"+ Kopio/piilok."</string>
+    <string name="plus_cc_label" msgid="3365150001259912183">"+ Kopio/piilok."</string>
     <string name="add_cc_bcc_menu" msgid="4757145078498200242">"Lisää kopio/piilok."</string>
-    <string name="add_attachment_menu" msgid="6854757034409168845">"Liitä tiedosto"</string>
+    <string name="add_file_attachment" msgid="2203398371671979481">"Liitä tiedosto"</string>
     <string name="close_action" msgid="533058985745238100">"Sulje"</string>
     <string name="message_list_send_pending_messages_action" msgid="8502942186631824114">"Lähetä kaikki viestit"</string>
     <string name="choose_attachment_dialog_title" msgid="81937507117528954">"Valitse liite"</string>
@@ -124,14 +124,14 @@
     <string name="message_compose_bcc_hint" msgid="9177337492358841680">"Piilokopio"</string>
     <string name="message_compose_subject_hint" msgid="6993487234024160782">"Aihe"</string>
     <string name="message_compose_from_label" msgid="4084843296548498041">"Lähettäjä:"</string>
-    <string name="message_compose_to_label" msgid="6806045787441348009">"Vastaanottaja:"</string>
-    <string name="message_compose_cc_label" msgid="5608567337432359209">"Kopio:"</string>
-    <string name="message_compose_bcc_label" msgid="8619598628773345338">"Piilokopio:"</string>
-    <string name="message_compose_subject_label" msgid="1592314202889683309">"Aihe:"</string>
-    <string name="message_compose_body_hint" msgid="7575406246484103697">"Kirjoita viesti"</string>
+    <string name="to" msgid="4392614766835725698">"Vastaanott."</string>
+    <string name="cc" msgid="7017720927911078193">"Kopio"</string>
+    <string name="bcc" msgid="3098643138241111579">"Piilokopio"</string>
+    <string name="subject_hint" msgid="7253964583324677128">"Aihe"</string>
+    <string name="body_hint" msgid="4279864165439577668">"Kirjoita sähköposti"</string>
     <string name="message_compose_fwd_header_fmt" msgid="5181300290654579434">\n\n"-------- Alkuperäinen viesti --------"\n"Aihe: <xliff:g id="SUBJECT">%1$s</xliff:g>"\n"Lähettäjä: <xliff:g id="SENDER">%2$s</xliff:g>"\n"Vastaanottaja: <xliff:g id="TO">%3$s</xliff:g>"\n"Kopio: <xliff:g id="CC_0">%4$s</xliff:g>"\n\n</string>
     <string name="message_compose_reply_header_fmt" msgid="8815624773273454573">\n\n"<xliff:g id="SENDER">%s</xliff:g> kirjoitti:"\n\n</string>
-    <string name="message_compose_quoted_text_label" msgid="5722467956990009520">"Lainattu teksti"</string>
+    <string name="message_compose_quoted_text_label" msgid="6950097435198536165">"Lisää lainattu teksti"</string>
     <string name="message_compose_include_quoted_text_checkbox_label" msgid="8165567368956050390">"Liitä teksti mukaan"</string>
     <string name="message_compose_error_no_recipients" msgid="4903715888250785486">"Vähintään yksi vastaanottaja on lisättävä."</string>
     <string name="message_compose_error_invalid_email" msgid="1817633338629885643">"Kaikki sähköpostiosoitteet eivät kelpaa."</string>
@@ -177,13 +177,13 @@
     <string name="message_view_show_details" msgid="6287415596441037095">"Näytä tiedot"</string>
     <string name="message_view_message_details_dialog_title" msgid="9042008615386883449">"Viestin tiedot"</string>
     <string name="attachment_info_dialog_default_title" msgid="4995755709689009622">"Liitteen tiedot"</string>
-    <string name="attachment_info_dialog_wifi_title" msgid="3433085933207351929">"Wifi-yhteys tarvitaan"</string>
-    <string name="attachment_info_wifi_settings" msgid="3275768005981284687">"Wifi-asetukset"</string>
+    <string name="attachment_info_dialog_wifi_title" msgid="3174350153882915382">"Wifi-yhteys vaaditaan"</string>
+    <string name="attachment_info_wifi_settings" msgid="96432970927503597">"Wifi-asetukset"</string>
     <string name="attachment_info_application_settings" msgid="4124655487276125596">"Sovellusasetukset"</string>
     <string name="attachment_info_unknown" msgid="8342655396805943320">"Liitteen avaaminen epäonnistui."</string>
     <string name="attachment_info_malware" msgid="6576029010855055528">"Et voi tallentaa tai avata tätä tiedostoa, koska tällainen liitetiedosto voi sisältää haittaohjelmia."</string>
     <string name="attachment_info_policy" msgid="3560422300127587508">"Tätä liitettä ei voi tallentaa tai avata tilin turvallisuuskäytäntöjen vuoksi."</string>
-    <string name="attachment_info_wifi_only" msgid="1952445279772844815">"Tämä liite on liian suuri ladattavaksi mobiiliverkon kautta. Voit ladata sen muodostaessasi wifi-yhteyden seuraavan kerran."</string>
+    <string name="attachment_info_wifi_only" msgid="1481120960014563617">"Tämä liite on liian suuri ladattavaksi mobiiliverkon kautta. Voit ladata sen muodostaessasi wifi-yhteyden seuraavan kerran."</string>
     <string name="attachment_info_no_intent" msgid="8139209405745777924">"Laitteeseen ei ole asennettu tämän liitetiedoston avaamiseen sopivaa sovellusta. Yritä ladata sopiva sovellus Android Marketista."</string>
     <string name="attachment_info_sideload_disabled" msgid="3270731101769840006">"Tämä liite on sovellus. Valitse Tuntemattomat lähteet kohdassa Asetukset &gt; Sovellukset, ennen kuin voit asentaa sovelluksen."</string>
     <string name="attachment_info_apk_install_disabled" msgid="2817790592227462682">"Sovelluksia ei voi asentaa suoraan sähköpostista. Tallenna sovellus ensin ja asenna se sitten Lataukset-sovelluksen avulla."</string>
@@ -201,8 +201,8 @@
   </plurals>
     <string name="message_discarded_toast" msgid="3891461729325584026">"Viesti hylätty."</string>
     <string name="message_saved_toast" msgid="8443125659172627665">"Viesti tallennettiin luonnokseksi."</string>
-    <string name="message_view_display_attachment_toast" msgid="5557358787789844554">"Liitetiedostoa ei voi näyttää."</string>
-    <string name="message_view_load_attachment_failed_toast" msgid="3623598332367932461">"Liitettä <xliff:g id="FILENAME">%s</xliff:g> ei voitu ladata."</string>
+    <string name="message_view_display_attachment_toast" msgid="7714482237896346836">"Liitetiedostoa ei voi näyttää."</string>
+    <string name="message_view_load_attachment_failed_toast" msgid="8605967295095023587">"Liitettä <xliff:g id="FILENAME">%s</xliff:g> ei voitu ladata."</string>
     <string name="message_view_parse_message_toast" msgid="8830378966553031281">"Avataan viestiä..."</string>
   <plurals name="message_moved_toast">
     <item quantity="one" msgid="3098493230185412871">"<xliff:g id="NUM_MESSAGE">%1$d</xliff:g> viesti siirretty kansioon <xliff:g id="MAILBOX_NAME">%2$s</xliff:g>"</item>
@@ -211,7 +211,7 @@
     <string name="forward_download_failed_ticker" msgid="6176608320359303255">"Vähintään yhden liitteen edelleenlähettäminen epäonnistui."</string>
     <string name="forward_download_failed_title" msgid="6139701848515572511">"Liitettä ei lähetetty edelleen"</string>
     <string name="login_failed_ticker" msgid="5749227022559285302">"Kirjautuminen tiliin <xliff:g id="ACCOUNT_NAME">%s</xliff:g> epäonnistui."</string>
-    <string name="login_failed_title" msgid="791871543602843876">"Kirjautuminen epäonnistui"</string>
+    <string name="login_failed_title" msgid="7624349996212476176">"Kirjautuminen ei onnistu"</string>
   <plurals name="message_view_attachment_bytes">
     <item quantity="one" msgid="8914124732074848509">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g> t"</item>
     <item quantity="other" msgid="4613385949384337840">"<xliff:g id="SIZE_IN_BYTES">%d</xliff:g> t"</item>
@@ -310,7 +310,7 @@
     <string name="account_setup_options_sync_contacts_label" msgid="7467467090023434271">"Synkronoi tämän tilin yhteystiedot."</string>
     <string name="account_setup_options_sync_calendar_label" msgid="3195979658426293931">"Synkronoi tämän tilin kalenteri."</string>
     <string name="account_setup_options_sync_email_label" msgid="3930927721878987383">"Synkronoi tämän tilin lähetetyt sähköpostit."</string>
-    <string name="account_setup_options_background_attachments_label" msgid="6759055024748351429">"Lataa liitteet automaattisesti wifi-yhteyden ollessa käytössä."</string>
+    <string name="account_setup_options_background_attachments_label" msgid="5247749298276451846">"Lataa liitteet automaattisesti wifi-yhteyden ollessa käytössä."</string>
     <string name="account_setup_failed_dlg_title" msgid="9083263347962940552">"Ei onnistunut"</string>
     <string name="account_setup_options_mail_window_label" msgid="7582247646138987328">"Synkronoitavien päivien määrä"</string>
     <string name="account_setup_options_mail_window_auto" msgid="4188895354366183790">"Automaattinen"</string>
@@ -361,8 +361,8 @@
     <string name="account_settings_login_dialog_content_fmt" msgid="3492735234999710234">"Tilin <xliff:g id="ACCOUNT">%s</xliff:g> käyttäjänimi tai salasana on virheellinen. Päivitetäänkö?"</string>
     <string name="account_settings_default_label" msgid="3575963379680943640">"Oletustili"</string>
     <string name="account_settings_default_summary" msgid="1531901438624688482">"Lähetä sähköposti oletuksena tältä tililtä"</string>
-    <string name="account_settings_background_attachments_label" msgid="6044567979405738536">"Lataa liitetiedostot automaattisesti"</string>
-    <string name="account_settings_background_attachments_summary" msgid="323937814012234081">"Lataa liitteet automaattisesti wifi-yhteyden ollessa käytössä."</string>
+    <string name="account_settings_background_attachments_label" msgid="2980317599840958688">"Lataa liitetiedostoja"</string>
+    <string name="account_settings_background_attachments_summary" msgid="5954218549226189376">"Lataa viimeaikaisten viestien liitteet wifi-yhteyden kautta."</string>
     <string name="account_settings_notify_label" msgid="1630001017303007974">"Sähköposti-ilmoitukset"</string>
     <string name="account_settings_summary" msgid="8403582255413830007">"Synkronoinnin tiheys, ilmoitukset jne."</string>
     <string name="account_settings_notify_summary" msgid="6301122709602752038">"Ilmoita tilarivissä, kun sähköpostiviesti saapuu"</string>
@@ -445,10 +445,10 @@
     <string name="general_preference_text_zoom_large" msgid="6874323663381586918">"Suuri"</string>
     <string name="general_preference_text_zoom_huge" msgid="4270503132355963031">"Hyvin suuri"</string>
     <string name="general_preference_reply_all_label" msgid="7806833609810003510">"Vastaa kaikille"</string>
-    <string name="general_preference_reply_all_summary" msgid="917669156784760966">"Aseta viesteihin vastaamisen oletusvalinnaksi Vastaa kaikille"</string>
-    <string name="general_preferences_clear_trusted_senders_title" msgid="8540277615940620308">"Palauta Näytä kuvat -oletusasetukset"</string>
-    <string name="general_preferences_clear_trusted_senders_summary" msgid="2018233140620247">"Palauta kaikkien lähettäjien oletukset (kuvia ei näytetä automaattisesti)"</string>
-    <string name="trusted_senders_cleared" msgid="8079053907862270420">"\"Näytä kuvat\" poistettu."</string>
+    <string name="general_preference_reply_all_summary" msgid="9191932552604733245">"Aseta viesteihin vastaamisen oletusvalinnaksi Vastaa kaikille."</string>
+    <string name="general_preferences_clear_trusted_senders_title" msgid="507988226277210305">"Kysy lupa kuvien näyttämiseen"</string>
+    <string name="general_preferences_clear_trusted_senders_summary" msgid="2648501128162793879">"Kuvien viestit eivät näy automaattisesti."</string>
+    <string name="trusted_senders_cleared" msgid="4762002183756251723">"Näytä kuvat poistettu."</string>
     <string name="position_of_count" msgid="7989353140376877792">"<xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$s</xliff:g>"</string>
     <string name="waitinf_for_sync_message_1" msgid="1393719303955128036">"Odotetaan synkronointia"</string>
     <string name="waitinf_for_sync_message_2" msgid="5656175205790694016">"Sähköposti tulee näkyviin pian."</string>
@@ -466,4 +466,5 @@
     <string name="search_slow_warning_title" msgid="2826118321880530239">"Odotetaan tuloksia"</string>
     <string name="search_slow_warning_message" msgid="8494483410797387903">"Joidenkin palvelimien vastaus voi kestää kauan."</string>
     <string name="action_bar_mailbox_list_title" msgid="7484457755531286333">"Kansiot"</string>
+    <string name="require_manual_sync_message" msgid="7777357288642785955">"Tämän tilin taustasynkronointi on pois käytöstä roaming-tilassa."</string>
 </resources>
